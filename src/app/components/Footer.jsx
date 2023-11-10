@@ -2,7 +2,7 @@ import { HiCake } from 'react-icons/hi2';
 
 function Footer({ children }) {
 	return (
-		<footer className='bg-transparent text-white flex justify-around border-t-red-500 border-dashed border-t-2'>
+		<footer className='bg-transparent text-white flex justify-around border-t-red-500 border-dashed border-t-2 mt-20'>
 			<div className='flex justify-center gap-4'>
 				<ul>
 					<HiCake />
