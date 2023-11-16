@@ -1,12 +1,13 @@
 import AppCard from './components/AppCard';
 import SectionCard from './components/SectionCard';
 import Button from './components/Button';
+import Link from 'next/link';
 
 function app() {
 	return (
-		<main>
-			<section id='title-card' className='my-[15vh] pb-8'>
-				<div className='text-white flex flex-col h-full justify-center text-left mr-auto justify-items-center max-w-l ml-20'>
+		<main className=''>
+			<section id='title-card' className='mb-[15vh] pb-8'>
+				<div className='text-white flex flex-col h-[80vh] justify-center text-left mr-auto justify-items-center ml-20'>
 					<h1 className='text-7xl font-bold text-gray-500 pt-20'>Hi👋,</h1>
 					<h1 className='text-7xl font-bold'>
 						<span className='text-gray-500'>I'm </span>Jakob Douglas
@@ -39,7 +40,9 @@ function app() {
 					Get to know me
 				</h2>
 				<div className='grid gap-5 grid-cols-2 grid-flow-row'>
-					<SectionCard />
+					<Link href={'about'}>
+						<SectionCard />
+					</Link>
 					<SectionCard />
 					<SectionCard />
 					<SectionCard />
