@@ -2,7 +2,7 @@ import { HiAcademicCap } from 'react-icons/hi2';
 
 import Image from 'next/image';
 
-function AppCard() {
+function SectionCard() {
 	return (
 		<div
 			className='bg-gray-800 rounded-3xl opacity-70 hover:opacity-100 hover:blur-0
@@ -29,4 +29,4 @@ function AppCard() {
 	);
 }
 
-export default AppCard;
+export default SectionCard;
