@@ -1,14 +1,19 @@
-import Link from 'next/link';
+import clsx from "clsx";
+import Link from "next/link";
 
-function Button({ children, to = '/' }) {
-	return (
-		<Link
-			href={`${to}`}
-			className='bg-gray-900 hover:shadow-gray-600 shadow-inner p-3 rounded-lg hover:text-white text-gray-400'
-		>
-			{children}
-		</Link>
-	);
+function Button({ children, size, to = "/" }) {
+  return (
+    <Link
+      href={`${to}`}
+      className={clsx(
+        "block rounded-lg bg-gray-900 text-gray-400 shadow-inner hover:text-white hover:shadow-gray-600",
+        size === "sm" ? "p-1" : "p-3",
+      )}
+    >
+      {" "}
+      <h1 className={clsx("", size === "sm" && "text-xs")}>{children}</h1>
+    </Link>
+  );
 }
 
 export default Button;

@@ -77,7 +77,7 @@ function page() {
 			<section className=' flex justify-left mt-5 ml-[30vw] opacity-70 text-3xl skew-x-12 text-white'>
 				<div>
 					<h1 className=' -rotate-[15deg] skew-x-[-40deg] font-thin italic'>
-						Signing Off
+						Jacking Off
 					</h1>
 				</div>
 			</section>
