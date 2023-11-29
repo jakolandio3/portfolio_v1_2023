@@ -2,10 +2,12 @@ import AppCard from "./components/AppCard";
 import SectionCard from "./components/SectionCard";
 import Button from "./components/Button";
 import Link from "next/link";
+import Modal from "./components/Modal";
+import List from "./library/AppList";
 
 function app() {
   return (
-    <main className="">
+    <main className="w-full">
       <section id="title-card" className="mb-[15vh] pb-8">
         <div className="ml-20 mr-auto flex h-[80vh] flex-col justify-center justify-items-center text-left text-white">
           <h1 className="pt-20 text-7xl font-bold text-gray-500">Hi👋,</h1>
@@ -25,14 +27,41 @@ function app() {
           </div>
         </div>
       </section>
-      <section id="selected-work" className="m-20">
-        <div className="flex flex-col gap-5">
-          <h2 className=" text-4xl font-bold text-white">Selected Work</h2>
-          <AppCard />
-          <AppCard />
-          <AppCard />
-          <AppCard />
-          <AppCard />
+      <section id="selected-work" className="w-[full] overflow-hidden">
+        <div className="flex flex-col items-center justify-center gap-5">
+          <h2 className=" w-[80%] pb-5 text-6xl font-bold text-white">
+            Selected Work
+          </h2>
+          {List.map((app) => (
+            <AppCard
+              key={app.name}
+              appName={app.name}
+              appBlurb={app.description}
+              appPhoto={app.photo}
+              bannerImg={app.bannerImg}
+              techStack={app.techStack}
+              whiteBG={app.light}
+              onClickCard={
+                <div className="flex h-full flex-col justify-between gap-3">
+                  <div className="grid grid-flow-row grid-cols-3 gap-1 text-xs">
+                    {app.category.map((genre) => (
+                      <p
+                        key={genre}
+                        className="w-[full] pb-3 italic text-white text-opacity-80"
+                      >
+                        {genre}
+                      </p>
+                    ))}
+                  </div>
+                  <div className="grid w-fit grid-flow-row grid-cols-2 gap-1">
+                    <Button to={app.gitHub}>{"Git Repo"}</Button>
+                    <Button to={app.website}>{"View site"}</Button>
+                    <Button to="projects">{"More.."}</Button>
+                  </div>
+                </div>
+              }
+            />
+          ))}
         </div>
       </section>
       <section id="title-card" className="m-20 my-[10vh] flex flex-col gap-5">
