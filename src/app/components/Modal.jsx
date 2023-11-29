@@ -3,12 +3,16 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import Button from "./Button";
 
-function Modal({ content, modalName }) {
+function Modal({
+  content,
+  modalName,
+  modalButton = "ModalButton-Placeholder",
+}) {
   const searchParams = useSearchParams();
   let showModal = searchParams.has(`modal_${modalName}`);
   return (
     <>
-      <Link href={`/?modal_${modalName}`}>toggle modal</Link>
+      <Link href={`/?modal_${modalName}`}>{modalButton}</Link>
       {showModal && <BoxModal content={content} />}
     </>
   );
