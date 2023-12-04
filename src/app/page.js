@@ -1,11 +1,13 @@
 import AppCard from "./components/AppCard";
 import SectionCard from "./components/SectionCard";
 import Button from "./components/Button";
-import Link from "next/link";
-import Modal from "./components/Modal";
+
 import List from "./library/AppList";
 
+import TechCardSmall from "./components/TechCardSmall";
+
 function app() {
+  const topApps = List.slice(0, 3);
   return (
     <main className="w-full">
       <section id="title-card" className="mb-[15vh] pb-8">
@@ -23,7 +25,7 @@ function app() {
 
           <div className="flex flex-row gap-5">
             <Button to="/resume"> See me Resume</Button>
-            <Button> Touch me</Button>
+            <Button to="/contact"> Touch me</Button>
           </div>
         </div>
       </section>
@@ -32,7 +34,7 @@ function app() {
           <h2 className=" w-[80%] pb-5 text-6xl font-bold text-white">
             Selected Work
           </h2>
-          {List.map((app) => (
+          {topApps.map((app) => (
             <AppCard
               key={app.name}
               appName={app.name}
@@ -54,8 +56,12 @@ function app() {
                     ))}
                   </div>
                   <div className="grid w-fit grid-flow-row grid-cols-2 gap-1">
-                    <Button to={app.gitHub}>{"Git Repo"}</Button>
-                    <Button to={app.website}>{"View site"}</Button>
+                    <Button newTab={true} to={app.gitHub}>
+                      {"Git Repo"}
+                    </Button>
+                    <Button newTab={true} to={app.website}>
+                      {"View site"}
+                    </Button>
                     <Button to="projects">{"More.."}</Button>
                   </div>
                 </div>
@@ -75,14 +81,25 @@ function app() {
             link="about"
           />
           <SectionCard
-            title="Notebook"
-            blurb="My thoughts, notes and reflections 🧘‍♀️"
-            link="notebook"
+            title="Small Projects"
+            blurb="Little Components and proofs on concepts that im working on"
+            link="smallProjects"
+            image="/nubelson-fernandes--Xqckh_XVU4-unsplash.png"
           />
           <SectionCard
             title="Tech Stack"
             blurb="My development toolkit 🤓💾"
             link="techStack"
+            content={
+              <div className=" mx-12 grid grid-flow-row grid-cols-4 gap-8 overflow-hidden">
+                <TechCardSmall /> <TechCardSmall /> <TechCardSmall />
+                <TechCardSmall />
+                <TechCardSmall /> <TechCardSmall /> <TechCardSmall />
+                <TechCardSmall />
+                <TechCardSmall /> <TechCardSmall /> <TechCardSmall />
+                <TechCardSmall />
+              </div>
+            }
           />
           <SectionCard
             title="Bookshelf"
@@ -106,7 +123,7 @@ function app() {
           </div>
 
           <div className="flex min-w-[200px] flex-nowrap self-center text-center">
-            <Button to="/resume">&rarr; Get in touch</Button>
+            <Button to="/contact">&rarr; Get in touch</Button>
           </div>
         </div>
       </section>

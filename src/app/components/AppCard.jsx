@@ -14,8 +14,10 @@ function AppCard({
 }) {
   return (
     <div
-      style={{ "background-image": "url(" + bannerImg + ")" }}
-      className=" m-16 flex w-[50vw] flex-row rounded-3xl border border-solid 
+      style={{
+        "background-image": "url(" + bannerImg + ")",
+      }}
+      className=" z-10 m-16 flex w-[50vw] flex-row rounded-3xl border border-solid
    border-gray-500  bg-gray-800 bg-cover px-5 pb-0.5 pt-5 opacity-70 transition-all duration-500 ease-in-out hover:opacity-100 hover:shadow-[0px_0px_150px_rgba(255,0,0,0.25),-50px_0px_150px_rgba(0,0,255,0.25),50px_0px_150px_rgba(255,255,0,0.25)] hover:blur-0"
     >
       <div
@@ -25,7 +27,7 @@ function AppCard({
         )}
       >
         <>
-          <div className=" mb-2 flex max-w-[70%] flex-row gap-2 rounded-md border-gray-500  p-1 shadow-inner shadow-gray-950">
+          <div className=" mb-2 flex max-w-[70%] flex-row gap-2 rounded-md border-gray-500 p-1  shadow-inner shadow-gray-950">
             {techStack?.map((tech) => (
               <p
                 className={clsx(
@@ -66,14 +68,16 @@ function AppCard({
         {onClickCard && <div className=" w-[80%]">{onClickCard}</div>}
       </div>
       <div className=" min-w[30%] relative w-[100%] ">
-        <Image
-          className=" rounded-t-xl"
-          fill={true}
-          objectFit="cover"
-          Position="fixed"
-          src={appPhoto}
-          alt="Phone"
-        />
+        {appPhoto !== "" && (
+          <Image
+            className=" rounded-t-xl"
+            fill={true}
+            objectFit="cover"
+            Position="fixed"
+            src={appPhoto}
+            alt="Phone"
+          />
+        )}
       </div>
     </div>
   );
