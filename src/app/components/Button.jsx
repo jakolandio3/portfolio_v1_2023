@@ -4,6 +4,7 @@ import Link from "next/link";
 function Button({ children, size, to = "/", newTab }) {
   return (
     <Link
+      scroll={false}
       href={`${to}`}
       target={newTab ? "_blank" : null}
       className={clsx(

@@ -1,50 +1,86 @@
-import { HiCake } from 'react-icons/hi2';
-import Button from './Button';
+import { HiCake } from "react-icons/hi2";
+import Link from "next/link";
+import LogoImg from "./LogoImg";
 
 function Footer({ children }) {
-	return (
-		<footer className=' text-white flex justify-around border-t-gray-500 border-dashed border-t-2 mt-20 border-opacity-20 pt-8'>
-			<div className='flex flex-col justify-between z-10 mb-4'>
-				<ul>
-					<div className='w-[50px] h-[50px] content-center justify-center flex align-middle text-center items-center border  to-[rgba(167,202,11,0.3)] from-[rgba(0,0,255,0.3)] via-[rgba(190,10,10,0.3)] bg-gradient-to-r rounded-t-2xl opacity-100 '>
-						<HiCake />
-					</div>
+  return (
+    <footer className=" mt-20 flex justify-around border-t-2 border-dashed border-t-gray-500 border-opacity-20 pt-8 text-white">
+      <div className="z-10 mb-4 flex flex-col justify-between">
+        <ul>
+          <LogoImg />
 
-					<p className=' opacity-30 font-extralight text-xs mt-4'>
-						Thanks for eating cake
-					</p>
-				</ul>
-				<p className=' opacity-30 font-extralight text-xs'>
-					&copy; 2023 Jakob Douglas. All Rights Reserved
-				</p>
-			</div>
-			<div className='flex justify-center gap-20 mb-[20px]'>
-				<ul>
-					<h1 className='font-extrabold mb-4'>Links</h1>
-					<div className=' opacity-30 font-extralight'>
-						{' '}
-						<li>About</li>
-						<li>Work</li>
-						<li>Tech Stack</li>
-						<li>Contact</li>{' '}
-					</div>
-				</ul>
-				<ul>
-					<h1 className='font-extrabold mb-4'>Elsewhere</h1>
-					<div className=' opacity-30 font-extralight'>
-						{' '}
-						<li>Email</li>
-						<li>LinkedIn</li>
-						<li>GitHub</li>
-						<li>Twitter</li> <li>Discord</li>{' '}
-					</div>
-				</ul>
-			</div>
-			<div className='w-[80%] to-yellow-500 from-[rgba(0,0,255,0.5)] via-red-500 bg-gradient-to-r rounded-t-full h-[100px] absolute opacity-40 blur-3xl -z-10'></div>
+          <p className=" mt-4 text-xs font-extralight opacity-30">
+            Thanks for eating cake
+          </p>
+        </ul>
+        <p className=" text-xs font-extralight opacity-30">
+          &copy; 2023 Jakob Douglas. All Rights Reserved
+        </p>
+      </div>
+      <div className="mb-[20px] flex justify-center gap-20">
+        <ul>
+          <h1 className="mb-4 font-extrabold">Links</h1>
+          <div className=" font-extralight opacity-30">
+            {" "}
+            <li>
+              <Link className=" hover:border-b-2" href={"about"}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link className=" hover:border-b-2" href={"work"}>
+                Work
+              </Link>
+            </li>
+            <li>
+              <Link className=" hover:border-b-2" href={"techStack"}>
+                Tech Stack
+              </Link>
+            </li>
+            <li>
+              <Link className=" hover:border-b-2" href={"contact"}>
+                Contact
+              </Link>
+            </li>{" "}
+          </div>
+        </ul>
+        <ul>
+          <h1 className="mb-4 font-extrabold">Elsewhere</h1>
+          <div className=" font-extralight opacity-30">
+            <li>
+              {" "}
+              <Link className=" hover:border-b-2" href={"contact"}>
+                Email
+              </Link>
+            </li>
+            <li>
+              {" "}
+              <Link
+                className=" hover:border-b-2"
+                href={"www.google.com"}
+                target="_blank"
+              >
+                LinkedIn
+              </Link>
+            </li>
+            <li>
+              {" "}
+              <Link
+                className=" hover:border-b-2"
+                href={"https://github.com/jakolandio3"}
+                target="_blank"
+              >
+                GitHub
+              </Link>
+            </li>
+          </div>
+        </ul>
+      </div>
+      <div className="absolute -z-10 h-[100px] w-[80%] rounded-t-full bg-gradient-to-r from-[rgba(0,0,255,0.5)] via-red-500 to-yellow-500 opacity-40 blur-3xl"></div>
 
-			{children}
-		</footer>
-	);
+      {children}
+    </footer>
+  );
 }
 
 export default Footer;

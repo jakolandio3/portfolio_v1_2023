@@ -18,24 +18,25 @@ function app() {
           </h1>
 
           <p className="mr-auto max-w-[80%] py-5 text-left opacity-40">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-            labore non tenetur similique unde autem qui sapiente debitis
-            adipisci magnam.
+            Im a student Full-Stack Web developer specializing in creating
+            web-based apps, <br /> and working with frameworks such as NextJs
+            and React
           </p>
 
           <div className="flex flex-row gap-5">
-            <Button to="/resume"> See me Resume</Button>
-            <Button to="/contact"> Touch me</Button>
+            <Button to="/about"> About me </Button>
+            <Button to="/contact"> Contact Me </Button>
           </div>
         </div>
       </section>
       <section id="selected-work" className="w-[full] overflow-hidden">
         <div className="flex flex-col items-center justify-center gap-5">
-          <h2 className=" w-[80%] pb-5 text-6xl font-bold text-white">
+          <h2 className="w-[80%] pb-5 text-6xl font-bold text-white">
             Selected Work
           </h2>
           {topApps.map((app) => (
             <AppCard
+              gallery={app.gallery}
               key={app.name}
               appName={app.name}
               appBlurb={app.description}
@@ -70,8 +71,11 @@ function app() {
           ))}
         </div>
       </section>
-      <section id="title-card" className="m-20 my-[10vh] flex flex-col gap-5">
-        <h2 className=" pb-[20px] text-4xl font-bold text-white">
+      <section
+        id="title-card"
+        className="m-20 my-[10vh] flex flex-col items-center gap-5"
+      >
+        <h2 className=" w-[80%] justify-center pb-[20px] text-6xl font-bold text-white">
           Get to know me
         </h2>
         <div className="grid grid-flow-row grid-cols-2 gap-5">
@@ -90,17 +94,13 @@ function app() {
             title="Tech Stack"
             blurb="My development toolkit 🤓💾"
             link="techStack"
-            content={
+          >
+            {
               <div className=" mx-12 grid grid-flow-row grid-cols-4 gap-8 overflow-hidden">
-                <TechCardSmall /> <TechCardSmall /> <TechCardSmall />
-                <TechCardSmall />
-                <TechCardSmall /> <TechCardSmall /> <TechCardSmall />
-                <TechCardSmall />
-                <TechCardSmall /> <TechCardSmall /> <TechCardSmall />
                 <TechCardSmall />
               </div>
             }
-          />
+          </SectionCard>
           <SectionCard
             title="Bookshelf"
             blurb="My collection of inspirational titles 📖"
@@ -112,13 +112,12 @@ function app() {
         <div className="flex flex-row justify-between">
           <div className="flex h-full flex-col justify-center justify-items-center text-left text-white">
             <h1 className="pt-10 text-4xl font-bold text-white">
-              Let's work together
+              Lets work together
             </h1>
 
             <p className="mr-auto max-w-[50%] py-5 text-left opacity-40">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-              labore non tenetur similique unde autem qui sapiente debitis
-              adipisci magnam.
+              Send me a message to get in contact and we can start working
+              together.
             </p>
           </div>
 

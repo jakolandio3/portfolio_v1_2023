@@ -31,6 +31,7 @@ function page() {
           </div>
           {List.map((app) => (
             <AppCard
+              gallery={app.gallery}
               key={app.name}
               appName={app.name}
               appBlurb={app.description}

@@ -1,8 +1,10 @@
+"use client";
 import { HiOutlineMail } from "react-icons/hi";
 import Link from "next/link";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 
 function LinksCard() {
+  const email = "jakobdouglas.dev@gmail.com";
   return (
     <div className="flex flex-col items-center justify-center rounded-3xl  bg-transparent px-5 pb-0.5 pt-10 text-center ">
       <div className=" mr-5 max-h-fit max-w-lg">
@@ -17,10 +19,17 @@ function LinksCard() {
    border border-dashed border-gray-500"
         >
           <div className="relative flex h-full content-center items-center justify-center gap-8 self-center p-5 text-5xl">
-            <Link href={"/"}>
+            <div
+              onClick={(e) => {
+                navigator.clipboard.writeText(email);
+                alert("email has been copied");
+              }}
+              className="my-0 flex flex-col gap-0 py-0"
+            >
               <HiOutlineMail />
-            </Link>
-            <Link href={"/"}>
+            </div>
+
+            <Link target="_blank" href={"https://github.com/jakolandio3"}>
               <SiGithub />
             </Link>
 

@@ -12,7 +12,9 @@ function Modal({
   let showModal = searchParams.has(`modal_${modalName}`);
   return (
     <>
-      <Link href={`/?modal_${modalName}`}>{modalButton}</Link>
+      <Link scroll={false} href={`?modal_${modalName}`}>
+        {modalButton}
+      </Link>
       {showModal && <BoxModal content={content} />}
     </>
   );
@@ -24,12 +26,12 @@ function BoxModal({ content }) {
   return (
     <div
       id="modal1"
-      className=" fixed left-[0%] top-[0%] z-[10] h-[100%] w-[100%]  bg-[rgba(255,255,255,0.1)] backdrop-blur-sm"
+      className="relative left-[-130%] top-[-15%] z-[10] flex h-[130%] w-[250%] rounded-xl  bg-[rgba(255,255,255,0)] backdrop-blur-sm"
     >
-      <div className=" fixed left-[25%]  top-[25%] z-[50] h-[50%] w-[50%] overflow-hidden rounded-xl border bg-transparent p-3">
+      <div className="no-scrollbar relative left-[10%] z-[50] h-[70%] w-[80%] self-center overflow-y-scroll rounded-xl border bg-transparent p-3">
         {content}
-        <div className="fixed right-0 top-0 m-20">
-          <Button>❌</Button>
+        <div className="fixed right-[-5%] top-[-50px] m-20">
+          <Button to="?">❌</Button>
         </div>
       </div>
     </div>
