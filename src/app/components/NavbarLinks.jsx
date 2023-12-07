@@ -1,5 +1,5 @@
 "use client";
-import { computeHeadingLevel } from "@testing-library/react";
+
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -13,7 +13,9 @@ function NavbarLinks() {
       <Link
         className={clsx(
           "hover:border-b-2",
-          pathName === "/" ? "text-red-600" : "",
+          pathName === "/"
+            ? "text-nav-text-color font-extrabold hover:border-b-0"
+            : "",
         )}
         href={"/"}
       >
@@ -22,7 +24,8 @@ function NavbarLinks() {
       <Link
         className={clsx(
           "hover:border-b-2",
-          pathName === "/projects" && "text-red-600",
+          pathName === "/projects" &&
+            "text-nav-text-color font-extrabold hover:border-b-0",
         )}
         href={"projects"}
       >
@@ -31,7 +34,8 @@ function NavbarLinks() {
       <Link
         className={clsx(
           "hover:border-b-2",
-          pathName === "/about" && "text-red-600",
+          pathName === "/about" &&
+            "text-nav-text-color font-extrabold hover:border-b-0",
         )}
         href={"about"}
       >
@@ -40,7 +44,8 @@ function NavbarLinks() {
       <Link
         className={clsx(
           "hover:border-b-2",
-          pathName === "/contact" && "text-red-600",
+          pathName === "/contact" &&
+            "text-nav-text-color font-extrabold hover:border-b-0",
         )}
         href={"contact"}
       >
@@ -59,7 +64,10 @@ function NavbarLinks() {
         {showMore === "true" ? "Show Less 🔺" : "Show More 🔻"}
       </Link>
       {showMore === "true" && (
-        <div className="absolute left-[25vw] top-[10vh] flex flex-col justify-start rounded-xl border-4 bg-black bg-opacity-80  p-8 text-left">
+        <div
+          id="navbar-extras"
+          className="bg-primary-color absolute left-[25vw] top-[10vh] flex flex-col justify-start rounded-xl border-4 bg-opacity-80  p-8 text-left"
+        >
           <Link
             className="border-b border-dashed opacity-80 hover:border-solid hover:opacity-100"
             href={"projects"}

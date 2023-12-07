@@ -1,31 +1,22 @@
 import Link from "next/link";
-import { HiAcademicCap } from "react-icons/hi2";
-import {
-  SiGithub,
-  SiLinkedin,
-  SiSpotlight,
-  SiVisualstudiocode,
-} from "react-icons/si";
-import Button from "./Button";
+
+import { SiGithub, SiLinkedin } from "react-icons/si";
+import LightMode from "./LightMode";
+
 function NavIcons() {
   return (
-    <div className="relative flex h-full content-center items-center justify-center gap-4 self-center px-2">
-      <Link href={"/"}>
-        <HiAcademicCap />
-      </Link>
+    <div
+      id="name-header"
+      className="relative flex h-full content-center items-center justify-center gap-4 self-center px-2 text-2xl"
+    >
       <Link href={"/"}>
         <SiGithub />
-      </Link>
-      <Link href={"/"}>
-        <SiVisualstudiocode />
       </Link>
       <Link href={"/"}>
         <SiLinkedin />
       </Link>
       |
-      <Button>
-        <SiSpotlight />
-      </Button>
+      <LightMode />
     </div>
   );
 }

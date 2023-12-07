@@ -12,8 +12,51 @@ const List = [
     ],
     photo: "/wild-oasis-side.png",
     gallery: [
-      { imageUrl: "/wild-oasis-bg.png", type: "nature", title: "good Milk" },
-      { imageUrl: "/wild-oasis-side.png", type: "nature", title: "good Milk" },
+      {
+        imageUrl: "/wild-oasis-bg.png",
+        type: "statistics",
+        title: "real-time statistics",
+      },
+      {
+        imageUrl: "/wild-oasis-side.png",
+        type: "security",
+        title: "Authenticated Accounts",
+      },
+      {
+        imageUrl: "/wild-Oasis/accounts.png",
+        type: "security",
+        title: "User Accounts",
+      },
+      {
+        imageUrl: "/wild-Oasis/cabin-update.png",
+        type: "Backend",
+        title: "Updating database",
+      },
+      {
+        imageUrl: "/wild-Oasis/checkin-guest.png",
+        type: "Backend",
+        title: "Updating cabin status",
+      },
+      {
+        imageUrl: "/wild-Oasis/light-mode.png",
+        type: "style",
+        title: "global light/dark-mode",
+      },
+      {
+        imageUrl: "/wild-Oasis/live-server-updating.png",
+        type: "backend",
+        title: "update/delete and add to database",
+      },
+      {
+        imageUrl: "/wild-Oasis/live-updates-booking.png",
+        type: "UI/UX",
+        title: "inbuilt notifications",
+      },
+      {
+        imageUrl: "/wild-Oasis/table-supabase.png",
+        type: "backend",
+        title: "Supabase tables",
+      },
     ],
     techStack: ["JS", "CSS", "HTML5"],
     website: "https://the-wild-oasis-jd23.netlify.app/login",
