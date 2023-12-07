@@ -1,10 +1,9 @@
-import { HiCake } from "react-icons/hi2";
 import Link from "next/link";
 import LogoImg from "./LogoImg";
 
 function Footer({ children }) {
   return (
-    <footer className=" mt-20 flex justify-around border-t-2 border-dashed border-t-gray-500 border-opacity-20 pt-8 text-white">
+    <footer className=" border-t-secondary-color text-primary-text-color mt-20 flex justify-around border-t-2 border-dashed border-opacity-20 pt-8">
       <div className="z-10 mb-4 flex flex-col justify-between">
         <ul>
           <LogoImg />

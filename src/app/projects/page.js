@@ -1,7 +1,7 @@
 import AppCard from "../components/AppCard";
 import Button from "../components/Button";
 import NewProjectCard from "../components/NewProjectCard";
-import SectionCard from "../components/SectionCard";
+
 import List from "../library/AppList";
 
 function page() {

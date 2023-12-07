@@ -8,13 +8,22 @@ import TechCardSmall from "./components/TechCardSmall";
 
 function app() {
   const topApps = List.slice(0, 3);
+
   return (
     <main className="w-full">
       <section id="title-card" className="mb-[15vh] pb-8">
-        <div className="ml-20 mr-auto flex h-[80vh] flex-col justify-center justify-items-center text-left text-white">
-          <h1 className="pt-20 text-7xl font-bold text-gray-500">Hi👋,</h1>
+        <div className="text-primary-text-color ml-20 mr-auto flex h-[80vh] flex-col justify-center justify-items-center text-left">
+          <h1
+            id="name-header"
+            className="text-secondary-text-color pt-20 text-7xl font-bold"
+          >
+            Hi👋,
+          </h1>
           <h1 className="text-7xl font-bold">
-            <span className="text-gray-500">I'm </span>Jakob Douglas
+            <span id="name-header" className="text-secondary-text-color">
+              I'm{" "}
+            </span>
+            Jakob Douglas
           </h1>
 
           <p className="mr-auto max-w-[80%] py-5 text-left opacity-40">
@@ -75,7 +84,7 @@ function app() {
         id="title-card"
         className="m-20 my-[10vh] flex flex-col items-center gap-5"
       >
-        <h2 className=" w-[80%] justify-center pb-[20px] text-6xl font-bold text-white">
+        <h2 className=" text-primary-text-color w-[80%] justify-center pb-[20px] text-6xl font-bold">
           Get to know me
         </h2>
         <div className="grid grid-flow-row grid-cols-2 gap-5">

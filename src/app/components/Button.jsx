@@ -8,7 +8,7 @@ function Button({ children, size, to = "/", newTab }) {
       href={`${to}`}
       target={newTab ? "_blank" : null}
       className={clsx(
-        "block rounded-lg bg-gray-900 text-gray-400 shadow-inner hover:text-white hover:shadow-gray-600",
+        "bg-button-bg text-button-text border-button-text block rounded-lg border shadow-inner hover:text-white hover:shadow-gray-600",
         size === "sm" ? "p-1" : "p-3",
       )}
     >
