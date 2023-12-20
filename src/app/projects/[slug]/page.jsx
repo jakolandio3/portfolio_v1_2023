@@ -1,4 +1,5 @@
 "use client";
+import Button from "@/app/components/Button";
 import PageLayout from "@/app/components/PageLayout";
 import List from "@/app/library/AppList";
 import Image from "next/image";
@@ -12,6 +13,7 @@ import "yet-another-react-lightbox/styles.css";
 
 function Page({ params }) {
   const [open, setOpen] = useState(false);
+  const [loadingImage, setLoadingImage] = useState(true);
   const [currentImage, setCurrentImage] = useState(1);
   let app = List.filter((app) => app.name === params.slug).at(0);
 
@@ -41,19 +43,38 @@ function Page({ params }) {
               setCurrentImage(index);
               setOpen(true);
             }}
-            className="flex w-full flex-col items-center rounded-lg border border-dashed hover:cursor-pointer"
+            className="flex w-full flex-col items-center rounded-lg  hover:cursor-pointer"
             key={item.title}
           >
             <h3 className="m-2 border-b-2 text-center text-xl font-semibold">
               {item.title}
             </h3>
-            <Image
-              className="self-center"
-              alt={item.title}
-              width={400}
-              height={600}
-              src={item.imageUrl}
-            />
+            {loadingImage === true ? (
+              <div className="relative h-full w-full">
+                <div className=" absolute flex h-full w-full content-center items-center justify-center self-center bg-black">
+                  <span className="loading loading-bars loading-lg"></span>
+                </div>{" "}
+                <Image
+                  onLoad={() => {
+                    setLoadingImage(false);
+                    console.log(loadingImage);
+                  }}
+                  className="self-center"
+                  alt={item.title}
+                  width={400}
+                  height={600}
+                  src={item.imageUrl}
+                />{" "}
+              </div>
+            ) : (
+              <Image
+                className="self-center"
+                alt={item.title}
+                width={400}
+                height={600}
+                src={item.imageUrl}
+              />
+            )}
           </div>
         ))}
         <Lightbox
@@ -76,22 +97,29 @@ function AppExtLinks({ app }) {
   return (
     <div className="flex flex-col">
       {" "}
-      <div className=" m-1 flex  w-fit gap-1 rounded-xl border border-dashed p-2 ">
-        <Link
-          target="_blank"
-          href={app.gitHub}
-          className="flex h-full w-full flex-col items-center justify-center text-center text-2xl text-white opacity-80 hover:opacity-100"
-        >
-          <SiGithub />
-          <span> Visit Repo </span>
-        </Link>
-        <Link
-          target="_blank"
-          href={app.website}
-          className="flex h-full w-full justify-center text-center text-2xl text-white opacity-80 hover:opacity-100"
-        >
-          View Website <FaExternalLinkAlt />
-        </Link>
+      <div className="flex w-[80%] flex-row items-center justify-between ">
+        <div className=" m-1 flex  w-fit gap-1 rounded-xl border border-dashed p-2 ">
+          <Link
+            target="_blank"
+            href={app.gitHub}
+            className="flex h-full w-full flex-col items-center justify-center text-center text-2xl text-white opacity-80 hover:opacity-100"
+          >
+            <SiGithub />
+            <span> Visit Repo </span>
+          </Link>
+          <Link
+            target="_blank"
+            href={app.website}
+            className="flex h-full w-full justify-center text-center text-2xl text-white opacity-80 hover:opacity-100"
+          >
+            View Website <FaExternalLinkAlt />
+          </Link>
+        </div>
+        <span className=" text-lg font-extrabold">
+          <Button scroll={false} to="/projects">
+            &larr; Back to projects
+          </Button>
+        </span>
       </div>
     </div>
   );
