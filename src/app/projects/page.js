@@ -1,8 +1,10 @@
+import { FaExternalLinkAlt } from "react-icons/fa";
 import AppCard from "../components/AppCard";
 import Button from "../components/Button";
 import NewProjectCard from "../components/NewProjectCard";
-
+import Link from "next/link";
 import List from "../library/AppList";
+import { SiGithub } from "react-icons/si";
 
 function page() {
   return (
@@ -15,7 +17,7 @@ function page() {
           <h1 className="text-7xl font-bold">Projects</h1>
 
           <p className="mr-auto max-w-[80%] py-5 text-left opacity-40">
-            Dis is what I do BBy.
+            Some of my previous projects
           </p>
         </div>
       </section>
@@ -51,14 +53,28 @@ function page() {
                       </p>
                     ))}
                   </div>
-                  <div className="grid w-fit grid-flow-row grid-cols-2 gap-1">
-                    <Button newTab={true} to={app.gitHub}>
-                      {"Git Repo"}
-                    </Button>
-                    <Button newTab={true} to={app.website}>
-                      {"View site"}
-                    </Button>
-                    <Button to="projects">{"More.."}</Button>
+                  <div className="m-1 grid w-fit grid-flow-row grid-cols-3 gap-1 rounded-xl border p-2 ">
+                    <Link
+                      target="_blank"
+                      href={app.gitHub}
+                      className="flex h-full w-full justify-center text-center text-2xl text-white opacity-80 hover:opacity-100"
+                    >
+                      <SiGithub />
+                    </Link>
+                    <Link
+                      target="_blank"
+                      href={app.website}
+                      className="flex h-full w-full justify-center text-center text-2xl text-white opacity-80 hover:opacity-100"
+                    >
+                      <FaExternalLinkAlt />
+                    </Link>
+
+                    <Link
+                      href={`/projects/${app.name}`}
+                      className="text-xl text-white opacity-80 hover:opacity-100 "
+                    >
+                      {"Gallery.."}
+                    </Link>
                   </div>
                 </div>
               }

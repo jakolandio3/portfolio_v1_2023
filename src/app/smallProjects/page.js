@@ -6,7 +6,7 @@ function page() {
   return (
     <PageLayout
       title={"Small-Projects"}
-      blurb={"Some small components and proofs on concept"}
+      blurb={"Some small components and proofs of concept"}
     >
       <div className="mx-20 flex w-full flex-col">
         <Notes title="Dev" image={"/altumcode-dMUt0X3f59Q-unsplash.png"} />
@@ -56,19 +56,15 @@ function Notes({
             </div>
           </div>
         </div>
-        <aside className="flex flex-col justify-between gap-3">
+        <aside className="flex flex-col  gap-3">
           <div>
             <h2 className="mb-5">
               {amount ? amount : "0"} {amount > 0 ? "Notes" : "Note"}
             </h2>
             <p className="text-xs">{blurb}</p>
           </div>
-          <div className="flex flex-row gap-4">
-            <input
-              className="rounded-xl border bg-transparent p-2"
-              type="text"
-            />{" "}
-            <Button>Add a Note</Button>
+          <div className="flex flex-col gap-4">
+            <a href="www.github.com"> &rarr; Visit Github Repo</a>
           </div>
         </aside>
       </div>
