@@ -1,4 +1,5 @@
 import Button from "../components/Button";
+import Image from "next/image";
 
 function page() {
   return (
@@ -66,8 +67,16 @@ function page() {
           </div>
         </main>
         <aside className="mx-5 mt-3 flex w-1/2 flex-col gap-20">
-          <div className="flex h-1/2 w-1/2 items-center justify-center self-center rounded-xl  border border-gray-500 border-opacity-20">
-            <img src="" alt="nope" />
+          <div className=" flex h-1/2 w-1/2 items-center justify-center self-center rounded-xl border border-gray-500 border-opacity-20">
+            <div className=" relative h-full w-full">
+              <Image
+                className="invert"
+                src={"/userIcon.svg"}
+                alt="https://www.freepik.com/icon/profile_8459373"
+                fill
+                objectFit="contain"
+              />
+            </div>
           </div>
           <div className="flex items-center justify-center">
             <Button to="/contact">&rarr; Get in touch</Button>
@@ -77,7 +86,7 @@ function page() {
       <section className=" justify-left ml-[30vw] mt-5 flex skew-x-12 text-3xl text-white opacity-70">
         <div>
           <h1 className=" -rotate-[15deg] skew-x-[-40deg] font-thin italic">
-            Jacking Off
+            Jakob .D
           </h1>
         </div>
       </section>

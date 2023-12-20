@@ -1,0 +1,98 @@
+"use client";
+import PageLayout from "@/app/components/PageLayout";
+import List from "@/app/library/AppList";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { SiGithub } from "react-icons/si";
+import Lightbox from "yet-another-react-lightbox";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/styles.css";
+
+function Page({ params }) {
+  const [open, setOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(1);
+  let app = List.filter((app) => app.name === params.slug).at(0);
+
+  const imageArray = app.gallery.map((image) => ({
+    src: image.imageUrl,
+    width: 3840,
+    height: 2560,
+    srcSet: [
+      { src: image.imageUrl, width: 320, height: 213 },
+      { src: image.imageUrl, width: 640, height: 426 },
+      { src: image.imageUrl, width: 1200, height: 800 },
+      { src: image.imageUrl, width: 2048, height: 1365 },
+      { src: image.imageUrl, width: 3840, height: 2560 },
+    ],
+  }));
+  console.log(imageArray);
+  return (
+    <PageLayout
+      extLinks={<AppExtLinks app={app} />}
+      title={app.name}
+      blurb={app.description}
+    >
+      <div className="grid-flow-rows grid grid-cols-3 gap-5">
+        {app.gallery.map((item, index) => (
+          <div
+            onClick={() => {
+              setCurrentImage(index);
+              setOpen(true);
+            }}
+            className="flex w-full flex-col items-center rounded-lg border border-dashed hover:cursor-pointer"
+            key={item.title}
+          >
+            <h3 className="m-2 border-b-2 text-center text-xl font-semibold">
+              {item.title}
+            </h3>
+            <Image
+              className="self-center"
+              alt={item.title}
+              width={400}
+              height={600}
+              src={item.imageUrl}
+            />
+          </div>
+        ))}
+        <Lightbox
+          // on={{ view: ({ index: currentIndex }) => setImage(currentIndex) }}
+          open={open}
+          close={() => setOpen(false)}
+          plugins={[Zoom]}
+          showPrevNext={true}
+          slides={imageArray}
+          index={currentImage}
+        />
+      </div>
+    </PageLayout>
+  );
+}
+
+export default Page;
+
+function AppExtLinks({ app }) {
+  return (
+    <div className="flex flex-col">
+      {" "}
+      <div className=" m-1 flex  w-fit gap-1 rounded-xl border border-dashed p-2 ">
+        <Link
+          target="_blank"
+          href={app.gitHub}
+          className="flex h-full w-full flex-col items-center justify-center text-center text-2xl text-white opacity-80 hover:opacity-100"
+        >
+          <SiGithub />
+          <span> Visit Repo </span>
+        </Link>
+        <Link
+          target="_blank"
+          href={app.website}
+          className="flex h-full w-full justify-center text-center text-2xl text-white opacity-80 hover:opacity-100"
+        >
+          View Website <FaExternalLinkAlt />
+        </Link>
+      </div>
+    </div>
+  );
+}

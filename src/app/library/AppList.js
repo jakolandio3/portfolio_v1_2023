@@ -2,7 +2,7 @@ const List = [
   {
     name: "The-Wild-Oasis",
     description:
-      "Application for booking cabins designed for staff usage with authentication and back end hosted with Supabase, fullstack- real world application that is reactive and looks fantastic",
+      "Application for booking cabins designed for staff usage with authentication and back end hosted with Supabase, fullstack- real world application that is fast, fully interactive and client friendly",
     category: [
       "Full-Stack",
       "React",
@@ -70,7 +70,33 @@ const List = [
       "Movie and Tv Streaming service with back-end Api fetching, star rating and user-storage for ratings. built with Vanilla JS",
     category: ["web-app", "front-end", "entertainment", "API"],
     photo: "/no-image.jpg",
-    gallery: [{ imageUrl: "", type: "nature", title: "good Milk" }],
+    gallery: [
+      {
+        imageUrl: "/flixx/flixx-banner.png",
+        type: "feature",
+        title: "scrolling-banner",
+      },
+      {
+        imageUrl: "/flixx/flixx-details.png",
+        type: "UI",
+        title: "Movie details",
+      },
+      {
+        imageUrl: "/flixx/flixx-pagination.png",
+        type: "feature",
+        title: "Api called Pagination",
+      },
+      {
+        imageUrl: "/flixx/flixx-relevant-titles.png",
+        type: "feature",
+        title: "relevant-titles",
+      },
+      {
+        imageUrl: "/flixx/flixx-search.png",
+        type: "feature",
+        title: "database search function",
+      },
+    ],
     techStack: ["JS", "CSS", "HTML5"],
     website: "https://phliexx-app.vercel.app/",
     gitHub: "",
@@ -166,6 +192,118 @@ const List = [
     gitHub: "https://github.com/jakolandio3/popcorn-Movies",
     bannerImg: "",
     light: true,
+  },
+  {
+    name: "Track-Calorie",
+    description:
+      "A small Vanilla application for tracking meals and workouts uses Webpack to deploy",
+    category: ["Learning", "JavaScript", "Health", "Fitness"],
+    photo: "",
+    gallery: [
+      {
+        imageUrl: "/track-calorie/add-meals-and-workouts.png",
+        type: "HomeScreen",
+        title: "Add your Meals and Workouts",
+      },
+      {
+        imageUrl: "/track-calorie/calorie-tracking.png",
+        type: "Calorie-tracking",
+        title: "Track Calories",
+      },
+      {
+        imageUrl: "/track-calorie/filtering.png",
+        type: "",
+        title: "Filtering",
+      },
+      {
+        imageUrl: "/track-calorie/set-daily-limit.png",
+        type: "",
+        title: "Set Daily Limit",
+      },
+    ],
+    techStack: ["JavaScript", "CSS", "WebPack"],
+    website: "https://merry-basbousa-be2432.netlify.app/",
+    gitHub: "https://github.com/jakolandio3/tracalorie-webpack",
+    bannerImg: "/track-calorie/add-meals-and-workouts.png",
+    light: true,
+  },
+  {
+    name: "Portfolio-V1",
+    description:
+      "A portfolio site designed as a small project and proof of concept made with Sass and a little JS, launched on Netlify using their integrated contact field and captcha components",
+    category: ["Learning", "JavaScript", "SASS", "Portfolio"],
+    photo: "",
+    gallery: [
+      {
+        imageUrl: "/oldPortfolio/about-section.png",
+        type: "About-Section",
+        title: "About Section",
+      },
+      {
+        imageUrl: "/oldPortfolio/contact-card.png",
+        type: "Contact",
+        title: "Contact Card",
+      },
+      {
+        imageUrl: "/oldPortfolio/creative-process.png",
+        type: "",
+        title: "Creative process",
+      },
+      {
+        imageUrl: "/oldPortfolio/dynamic-ineractive-app-cards.png",
+        type: "design",
+        title: "Dynamic and Interactive components",
+      },
+      {
+        imageUrl: "/oldPortfolio/hero-image.png",
+        type: "homeScreen",
+        title: "Hero Image with Typewritter Effect",
+      },
+      {
+        imageUrl: "/oldPortfolio/responsive-design-form-mobile.png",
+        type: "mobile",
+        title: "Responsive design for Mobile first development",
+      },
+    ],
+    techStack: ["JavaScript", "Sass", "WebPack"],
+    website: "https://vocal-cascaron-6d1519.netlify.app/",
+    gitHub: "https://github.com/jakolandio3/potfolio_webstite",
+    bannerImg: "/oldPortfolio/hero-image.png",
+    light: true,
+  },
+  {
+    name: "NewsGrid",
+    description:
+      "A News Website made while mastering GridBox as a design concept, mainly built for learning purposes",
+    category: ["Learning", "JavaScript", "Css"],
+    photo: "/news-grid/articles.png",
+    gallery: [
+      {
+        imageUrl: "/news-grid/adaptive-to-device-size.png",
+        type: "Design",
+        title: "Articles and Posts",
+      },
+      {
+        imageUrl: "/news-grid/articles.png",
+        type: "Design",
+        title: "Hero Images",
+      },
+      {
+        imageUrl: "/news-grid/design-concepts.png",
+        type: "Design",
+        title: "Layout Concept",
+      },
+      {
+        imageUrl: "/news-grid/full-size.png",
+        type: "Design",
+        title: "Dynamic changes dependent on device Size",
+      },
+    ],
+    techStack: ["Css", "Html", "Grid"],
+    website: "https://dreamy-seahorse-3b2d65.netlify.app/",
+    gitHub: "https://github.com/jakolandio3/NewsGrid",
+    bannerImg: "",
+    light: false,
   },
 ];
 

@@ -19,8 +19,8 @@
   --text-secondary-color: #78716c;
   --nav-text-color: #ef4444;
   --sun-color: #fde047;
-  --button-bg: #1e293b;
-  --button-text: #78716c;
+  --button-bg: #f4f4f4;
+  --button-text: #000;
   --text-field-bg: #1c1917;
   --text-field-text: #f4f4f4;
   &.light-mode {
@@ -44,8 +44,8 @@
     --text-secondary-color: #78716c;
     --nav-text-color: #ef4444;
     --sun-color: #fde047;
-    --button-bg: #1e293b;
-    --button-text: #78716c;
+    --button-bg: #f4f4f4;
+    --button-text: #000;
     --text-field-bg: #1c1917;
     --text-field-text: #f4f4f4;
   }

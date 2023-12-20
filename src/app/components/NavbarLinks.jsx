@@ -5,6 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { useState } from "react";
+import { AiOutlineExpandAlt } from "react-icons/ai";
+import { FaExternalLinkAlt } from "react-icons/fa";
 function NavbarLinks() {
   const [showMore, setShowMore] = useState("false");
   const pathName = usePathname();
@@ -14,7 +16,7 @@ function NavbarLinks() {
         className={clsx(
           "hover:border-b-2",
           pathName === "/"
-            ? "text-nav-text-color font-extrabold hover:border-b-0"
+            ? "font-extrabold text-nav-text-color hover:border-b-0"
             : "",
         )}
         href={"/"}
@@ -25,9 +27,9 @@ function NavbarLinks() {
         className={clsx(
           "hover:border-b-2",
           pathName === "/projects" &&
-            "text-nav-text-color font-extrabold hover:border-b-0",
+            "font-extrabold text-nav-text-color hover:border-b-0",
         )}
-        href={"projects"}
+        href={"/projects"}
       >
         Work
       </Link>
@@ -35,9 +37,9 @@ function NavbarLinks() {
         className={clsx(
           "hover:border-b-2",
           pathName === "/about" &&
-            "text-nav-text-color font-extrabold hover:border-b-0",
+            "font-extrabold text-nav-text-color hover:border-b-0",
         )}
-        href={"about"}
+        href={"/about"}
       >
         About
       </Link>
@@ -45,56 +47,35 @@ function NavbarLinks() {
         className={clsx(
           "hover:border-b-2",
           pathName === "/contact" &&
-            "text-nav-text-color font-extrabold hover:border-b-0",
+            "font-extrabold text-nav-text-color hover:border-b-0",
         )}
-        href={"contact"}
+        href={"/contact"}
       >
         Contact
       </Link>
+
       <Link
-        className=" hover:border-b-2"
-        onClick={() => setShowMore(showMore === "true" ? "false" : "true")}
-        href={{
-          pathname: "",
-          query: {
-            More: showMore,
-          },
-        }}
+        className={clsx(
+          "hover:border-b-2",
+          pathName === "/techStack" &&
+            "font-extrabold text-nav-text-color hover:border-b-0",
+        )}
+        href={"/techStack"}
       >
-        {showMore === "true" ? "Show Less 🔺" : "Show More 🔻"}
+        Tech Stack
       </Link>
-      {showMore === "true" && (
-        <div
-          id="navbar-extras"
-          className="bg-primary-color absolute left-[25vw] top-[10vh] flex flex-col justify-start rounded-xl border-4 bg-opacity-80  p-8 text-left"
-        >
-          <Link
-            className="border-b border-dashed opacity-80 hover:border-solid hover:opacity-100"
-            href={"projects"}
-          >
-            Projects
-          </Link>
-          <Link
-            className="border-b border-dashed opacity-80 hover:border-solid hover:opacity-100"
-            href={"bookshelf"}
-          >
-            Bookshelf
-          </Link>
-          <Link
-            className="border-b border-dashed opacity-80 hover:border-solid hover:opacity-100"
-            href={"techStack"}
-          >
-            Tech Stack
-          </Link>
-          <Link
-            className="border-b border-dashed opacity-80 hover:border-solid hover:opacity-100"
-            target="_blank"
-            href={"https://github.com/jakolandio3/portfolio_v1_2023"}
-          >
-            This Repo
-          </Link>
+      <Link
+        className="hover:border-b-2"
+        target="_blank"
+        href={"https://github.com/jakolandio3/portfolio_v1_2023"}
+      >
+        <div className="flex flex-row gap-1">
+          This Repo{" "}
+          <span className="text-xs">
+            <FaExternalLinkAlt />
+          </span>
         </div>
-      )}
+      </Link>
     </div>
   );
 }
