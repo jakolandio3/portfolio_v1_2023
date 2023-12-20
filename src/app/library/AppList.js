@@ -65,6 +65,67 @@ const List = [
     light: true,
   },
   {
+    name: "World-Wise",
+    description:
+      "SPA made with Vite + React that tracks where you have traveled featuring a responsive design and open source map from Leaflet",
+    category: [
+      "full-stack",
+      "Travel",
+      "database",
+      "small-projects",
+      "vite",
+      "react",
+    ],
+    photo: "",
+    gallery: [
+      {
+        imageUrl: "/world-wise/worldWise-bg.png",
+        type: "travel",
+        title: "Track your Travels",
+      },
+      {
+        imageUrl: "/world-wise/authentication.png",
+        type: "Auth",
+        title: "Authentication and Accounts",
+      },
+      {
+        imageUrl: "/world-wise/leaflet-map.png",
+        type: "UX",
+        title: "Use Your Location",
+      },
+      {
+        imageUrl: "/world-wise/click-to-add.png",
+        type: "UI",
+        title: "Click to add to your List",
+      },
+      {
+        imageUrl: "/world-wise/adds-markers-notes-and-details.png",
+        type: "UI",
+        title: "Markers and details",
+      },
+      {
+        imageUrl: "/world-wise/adddelete-items-and-dates.png",
+        type: "UX",
+        title: "Move to, update or delete locations",
+      },
+      {
+        imageUrl: "/world-wise/creates-countries.png",
+        type: "UX",
+        title: "County List automatically created",
+      },
+      {
+        imageUrl: "/world-wise/local-server.png",
+        type: "back-end",
+        title: "Tracked on Json Server (local or hosted)",
+      },
+    ],
+    techStack: ["React", "Vite", "CSS-Modules"],
+    website: "https://world-wise-snowy.vercel.app/",
+    gitHub: "https://github.com/jakolandio3/WorldWise",
+    bannerImg: "/world-wise/worldWise-bg.png",
+    light: true,
+  },
+  {
     name: "Flixx-App",
     description:
       "Movie and Tv Streaming service with back-end Api fetching, star rating and user-storage for ratings. built with Vanilla JS",
@@ -147,67 +208,6 @@ const List = [
     light: true,
   },
   {
-    name: "World-Wise",
-    description:
-      "SPA made with Vite + React that tracks where you have traveled featuring a responsive design and open source map from Leaflet",
-    category: [
-      "full-stack",
-      "Travel",
-      "database",
-      "small-projects",
-      "vite",
-      "react",
-    ],
-    photo: "",
-    gallery: [
-      {
-        imageUrl: "/world-wise/worldWise-bg.png",
-        type: "travel",
-        title: "Track your Travels",
-      },
-      {
-        imageUrl: "/world-wise/authentication.png",
-        type: "Auth",
-        title: "Authentication and Accounts",
-      },
-      {
-        imageUrl: "/world-wise/leaflet-map.png",
-        type: "UX",
-        title: "Use Your Location",
-      },
-      {
-        imageUrl: "/world-wise/click-to-add.png",
-        type: "UI",
-        title: "Click to add to your List",
-      },
-      {
-        imageUrl: "/world-wise/adds-markers-notes-and-details.png",
-        type: "UI",
-        title: "Markers and details",
-      },
-      {
-        imageUrl: "/world-wise/adddelete-items-and-dates.png",
-        type: "UX",
-        title: "Move to, update or delete locations",
-      },
-      {
-        imageUrl: "/world-wise/creates-countries.png",
-        type: "UX",
-        title: "County List automatically created",
-      },
-      {
-        imageUrl: "/world-wise/local-server.png",
-        type: "back-end",
-        title: "Tracked on Json Server (local or hosted)",
-      },
-    ],
-    techStack: ["React", "Vite", "CSS-Modules"],
-    website: "https://world-wise-snowy.vercel.app/",
-    gitHub: "https://github.com/jakolandio3/WorldWise",
-    bannerImg: "/world-wise/worldWise-bg.png",
-    light: true,
-  },
-  {
     name: "Fast-react-pizza",
     description:
       "Pizza ordering and order tracking application for a shop, made with react, vite and styled with tailwind. this app makes use of React router, Redux, context providers and React reducer",
@@ -220,7 +220,43 @@ const List = [
       "tailwind",
     ],
     photo: "/reactPizza.png",
-    gallery: [{ imageUrl: "", type: "nature", title: "good Milk" }],
+    gallery: [
+      {
+        imageUrl: "/react-pizza/order-pizzas-online.png",
+        type: "UI",
+        title: "Order Pizzas online",
+      },
+      {
+        imageUrl: "/react-pizza/cart-system.png",
+        type: "UI",
+        title: "Cart System",
+      },
+      {
+        imageUrl: "/react-pizza/order-with-validation.png",
+        type: "UI",
+        title: "User validation",
+      },
+      {
+        imageUrl: "/react-pizza/update-orders-to-priorirty.png",
+        type: "UI",
+        title: "Prioritize orders",
+      },
+      {
+        imageUrl: "/react-pizza/live-updates.png",
+        type: "UI",
+        title: "Live Status and Unique Ref No.",
+      },
+      {
+        imageUrl: "/react-pizza/mobile-friendly.png",
+        type: "UI",
+        title: "Responsive design",
+      },
+      {
+        imageUrl: "/react-pizza/cart-on-mobile.png",
+        type: "UI",
+        title: "Order on Mobile",
+      },
+    ],
     techStack: ["React", "Redux", "Vite", "tailwind"],
     website:
       "https://fast-react-pizza-7gritbzny-jakobs-projects-a58f329a.vercel.app/",
@@ -234,7 +270,33 @@ const List = [
       "SPA that tests your knowledge for basic and advanced react skills build using react hooks such as context, state, effect and reducer",
     category: ["Learning", "react", "server-hosting", "API"],
     photo: "/quiz-side.png",
-    gallery: [{ imageUrl: "", type: "nature", title: "good Milk" }],
+    gallery: [
+      {
+        imageUrl: "/react-quiz/test-your-knowledge.png",
+        type: "",
+        title: "Test your knowledge",
+      },
+      {
+        imageUrl: "/react-quiz/shows-correct-answer-after.png",
+        type: "",
+        title: "Reducer driven state updates",
+      },
+      {
+        imageUrl: "/react-quiz/track-questions-and-points.png",
+        type: "",
+        title: "Track timer, points and progress",
+      },
+      {
+        imageUrl: "/react-quiz/highscores.png",
+        type: "",
+        title: "Beat your score",
+      },
+      {
+        imageUrl: "/react-quiz/json-sever.png",
+        type: "",
+        title: "Json server",
+      },
+    ],
     techStack: ["React", "Json-Server", "tailwind"],
     website: "https://react-quiz-2023-seven.vercel.app/",
     gitHub:
@@ -248,7 +310,28 @@ const List = [
       "A single page application for use in searching and reviewing movies, using API fetching and built with react",
     category: ["Learning", "react", "API", "entertainment"],
     photo: "/popcorn.png",
-    gallery: [{ imageUrl: "", type: "nature", title: "good Milk" }],
+    gallery: [
+      {
+        imageUrl: "/popcorn-movies/search-database.png",
+        type: "",
+        title: "Search your Movies",
+      },
+      {
+        imageUrl: "/popcorn-movies/details.png",
+        type: "",
+        title: "Details page from API",
+      },
+      {
+        imageUrl: "/popcorn-movies/simple-error-handling.png",
+        type: "",
+        title: "Simple Error handling",
+      },
+      {
+        imageUrl: "/popcorn-movies/add-and-rate.png",
+        type: "",
+        title: "Rate and add to your collection",
+      },
+    ],
     techStack: ["React", "Json-Server", "tailwind"],
     website: "https://popcorn-movies-nine.vercel.app/",
     gitHub: "https://github.com/jakolandio3/popcorn-Movies",
