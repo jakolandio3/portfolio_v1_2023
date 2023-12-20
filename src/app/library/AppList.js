@@ -118,7 +118,28 @@ const List = [
       "axios",
     ],
     photo: "",
-    gallery: [{ imageUrl: "", type: "nature", title: "good Milk" }],
+    gallery: [
+      {
+        imageUrl: "/random-ideas/random-bg.png",
+        type: "Home",
+        title: "Share Ideas with friends or groups",
+      },
+      {
+        imageUrl: "/random-ideas/scale-on-screen-size.png",
+        type: "UX",
+        title: "Create a User for your ideas",
+      },
+      {
+        imageUrl: "/random-ideas/launched-with-mongo.png",
+        type: "back-end",
+        title: "Deployed with Atlas by MongoDB",
+      },
+      {
+        imageUrl: "/random-ideas/random-side.png",
+        type: "UX",
+        title: "Mobile adaptive design",
+      },
+    ],
     techStack: ["JS", "CSS", "HTML5", "NODEJS"],
     website: "https://random-ideas-app-qcno.onrender.com",
     gitHub: "https://github.com/jakolandio3/newrandomideas/tree/main",
@@ -138,11 +159,52 @@ const List = [
       "react",
     ],
     photo: "",
-    gallery: [{ imageUrl: "", type: "nature", title: "good Milk" }],
+    gallery: [
+      {
+        imageUrl: "/world-wise/worldWise-bg.png",
+        type: "travel",
+        title: "Track your Travels",
+      },
+      {
+        imageUrl: "/world-wise/authentication.png",
+        type: "Auth",
+        title: "Authentication and Accounts",
+      },
+      {
+        imageUrl: "/world-wise/leaflet-map.png",
+        type: "UX",
+        title: "Use Your Location",
+      },
+      {
+        imageUrl: "/world-wise/click-to-add.png",
+        type: "UI",
+        title: "Click to add to your List",
+      },
+      {
+        imageUrl: "/world-wise/adds-markers-notes-and-details.png",
+        type: "UI",
+        title: "Markers and details",
+      },
+      {
+        imageUrl: "/world-wise/adddelete-items-and-dates.png",
+        type: "UX",
+        title: "Move to, update or delete locations",
+      },
+      {
+        imageUrl: "/world-wise/creates-countries.png",
+        type: "UX",
+        title: "County List automatically created",
+      },
+      {
+        imageUrl: "/world-wise/local-server.png",
+        type: "back-end",
+        title: "Tracked on Json Server (local or hosted)",
+      },
+    ],
     techStack: ["React", "Vite", "CSS-Modules"],
     website: "https://world-wise-snowy.vercel.app/",
     gitHub: "https://github.com/jakolandio3/WorldWise",
-    bannerImg: "/worldWise-bg.png",
+    bannerImg: "/world-wise/worldWise-bg.png",
     light: true,
   },
   {
