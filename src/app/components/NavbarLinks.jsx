@@ -1,14 +1,80 @@
-import Link from 'next/link';
+"use client";
 
+import clsx from "clsx";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+import { FaExternalLinkAlt } from "react-icons/fa";
 function NavbarLinks() {
-	return (
-		<div className='px-2 justify-between flex-auto flex gap-4 justify-items-center align-middle'>
-			<Link href={'/'}>Home</Link>
-			<Link href={'projects'}>Work</Link>
-			<Link href={'/'}>Contact</Link>
-			<Link href={'/'}>More &darr;</Link>
-		</div>
-	);
+  const pathName = usePathname();
+  return (
+    <div className="grid grid-cols-2 justify-between justify-items-center gap-4 px-2 align-middle sm:flex sm:flex-row">
+      <Link
+        className={clsx(
+          "hover:border-b-2",
+          pathName === "/"
+            ? "font-extrabold text-nav-text-color hover:border-b-0"
+            : "",
+        )}
+        href={"/"}
+      >
+        Home
+      </Link>
+      <Link
+        className={clsx(
+          "hover:border-b-2",
+          pathName === "/projects" &&
+            "font-extrabold text-nav-text-color hover:border-b-0",
+        )}
+        href={"/projects"}
+      >
+        Work
+      </Link>
+      <Link
+        className={clsx(
+          "hover:border-b-2",
+          pathName === "/about" &&
+            "font-extrabold text-nav-text-color hover:border-b-0",
+        )}
+        href={"/about"}
+      >
+        About
+      </Link>
+      <Link
+        className={clsx(
+          "hover:border-b-2",
+          pathName === "/contact" &&
+            "font-extrabold text-nav-text-color hover:border-b-0",
+        )}
+        href={"/contact"}
+      >
+        Contact
+      </Link>
+
+      <Link
+        className={clsx(
+          "hover:border-b-2",
+          pathName === "/techStack" &&
+            "font-extrabold text-nav-text-color hover:border-b-0",
+        )}
+        href={"/techStack"}
+      >
+        Tech Stack
+      </Link>
+      <Link
+        className="hover:border-b-2"
+        target="_blank"
+        href={"https://github.com/jakolandio3/portfolio_v1_2023"}
+      >
+        <div className="flex flex-row gap-1">
+          This Repo{" "}
+          <span className="text-xs">
+            <FaExternalLinkAlt />
+          </span>
+        </div>
+      </Link>
+    </div>
+  );
 }
 
 export default NavbarLinks;
