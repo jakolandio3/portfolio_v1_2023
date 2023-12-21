@@ -5,7 +5,7 @@ function PageLayout({ children, title, blurb, extLinks }) {
         id="title-card"
         className="mr-auto mt-[15vh] w-full flex-col border-b border-dashed border-gray-500 border-opacity-20 bg-transparent pb-8 text-left text-white"
       >
-        <div className=" ml-32 flex h-full flex-col text-left text-white">
+        <div className=" flex h-full flex-col text-left text-white md:ml-32">
           <h1 className="flex flex-col gap-5 text-7xl font-bold">
             {title} <span>{extLinks}</span>
           </h1>

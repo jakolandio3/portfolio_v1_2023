@@ -29,21 +29,21 @@ function Page({ params }) {
       { src: image.imageUrl, width: 3840, height: 2560 },
     ],
   }));
-  console.log(imageArray);
+
   return (
     <PageLayout
       extLinks={<AppExtLinks app={app} />}
       title={app.name}
       blurb={app.description}
     >
-      <div className="grid-flow-rows grid grid-cols-3 gap-5">
+      <div className="grid-flow-rows grid gap-10 md:grid-cols-3 md:gap-5">
         {app.gallery.map((item, index) => (
           <div
             onClick={() => {
               setCurrentImage(index);
               setOpen(true);
             }}
-            className="flex w-full flex-col items-center rounded-lg  hover:cursor-pointer"
+            className="flex w-full items-center gap-12 rounded-lg border hover:cursor-pointer md:flex-col md:gap-0  md:border-none"
             key={item.title}
           >
             <h3 className="m-2 border-b-2 text-center text-xl font-semibold">
@@ -57,7 +57,6 @@ function Page({ params }) {
                 <Image
                   onLoad={() => {
                     setLoadingImage(false);
-                    console.log(loadingImage);
                   }}
                   className="self-center"
                   alt={item.title}
@@ -95,24 +94,25 @@ export default Page;
 
 function AppExtLinks({ app }) {
   return (
-    <div className="flex flex-col">
+    <div className="mt-12 flex flex-col md:mt-0">
       {" "}
-      <div className="flex w-[80%] flex-row items-center justify-between ">
-        <div className=" m-1 flex  w-fit gap-1 rounded-xl border border-dashed p-2 ">
+      <div className="flex flex-row items-center justify-between md:w-[80%] ">
+        <div className=" m-1 flex  w-fit gap-12 rounded-xl border border-dashed p-2 md:gap-1 ">
           <Link
             target="_blank"
             href={app.gitHub}
             className="flex h-full w-full flex-col items-center justify-center text-center text-2xl text-white opacity-80 hover:opacity-100"
           >
             <SiGithub />
-            <span> Visit Repo </span>
+            <span className="hidden md:block"> Visit Repo </span>
           </Link>
           <Link
             target="_blank"
             href={app.website}
             className="flex h-full w-full justify-center text-center text-2xl text-white opacity-80 hover:opacity-100"
           >
-            View Website <FaExternalLinkAlt />
+            <span className="hidden md:block"> View Website</span>{" "}
+            <FaExternalLinkAlt />
           </Link>
         </div>
         <span className=" text-lg font-extrabold">

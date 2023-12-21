@@ -3,12 +3,12 @@ import Image from "next/image";
 
 function page() {
   return (
-    <div className="w-3/4">
+    <div className="md:w-3/4">
       <section
         id="title-card"
         className="mt-[15vh] border-b border-dashed border-gray-500 border-opacity-20 pb-8"
       >
-        <div className="max-w-l ml-20 mr-auto flex h-full flex-col justify-center justify-items-center text-left text-white">
+        <div className="md:max-w-l mr-auto flex h-full flex-col justify-center justify-items-center text-left text-white md:ml-20">
           <h1 className="text-7xl font-bold">A little bit about myself</h1>
 
           <p className="mr-auto max-w-[80%] py-5 text-left opacity-40">
@@ -16,8 +16,8 @@ function page() {
           </p>
         </div>
       </section>
-      <section className="max-w-l ml-20 mr-auto mt-[20px] flex h-full flex-row justify-between justify-items-center text-left text-white">
-        <main className="w-1/2">
+      <section className="md:max-w-l mr-auto mt-[20px] flex h-full flex-col justify-between justify-items-center text-left text-white md:ml-20 md:flex-row">
+        <main className="md:w-1/2">
           <div className="pb-3">
             <h2 className="text-sm font-medium opacity-40">Who I am</h2>
             <p className="text-sm font-thin opacity-90">
@@ -61,8 +61,8 @@ function page() {
             <p className="text-sm font-thin opacity-90">-sincerely</p>
           </div>
         </main>
-        <aside className="mx-5 mt-3 flex w-1/2 flex-col gap-20">
-          <div className=" flex h-1/2 w-1/2 items-center justify-center self-center rounded-xl border border-gray-500 border-opacity-20">
+        <aside className="mx-5 mt-3 flex flex-col gap-20 md:w-1/2">
+          <div className=" flex items-center justify-center self-center rounded-xl border border-gray-500 border-opacity-20 md:h-1/2 md:w-1/2">
             <div className=" relative h-full w-full">
               <Image
                 className="invert"

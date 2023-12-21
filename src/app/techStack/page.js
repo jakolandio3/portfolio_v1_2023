@@ -9,7 +9,7 @@ function page() {
       blurb={"The Development tools in my arsenal"}
     >
       <main className="flex w-full flex-col items-center gap-40">
-        <section className="flex w-[80%] flex-col items-center gap-5">
+        <section className="flex flex-col items-center gap-5 md:w-[80%]">
           <h2 className="ml-[10%] w-full text-4xl">Dev & Design</h2>
           <div className="grid grid-flow-row grid-cols-3 gap-5">
             <TechCard
@@ -50,7 +50,7 @@ function page() {
             <TechCard title="SassCSS" blurb="style" image="/icons8-sass.svg" />
           </div>
         </section>
-        <section className="flex w-[80%] flex-col items-center gap-5">
+        <section className="flex flex-col items-center gap-5 md:w-[80%]">
           <h2 className="ml-[10%] w-full  text-4xl">Apps</h2>
           <div className="grid grid-flow-row grid-cols-3 gap-5">
             <TechCard
