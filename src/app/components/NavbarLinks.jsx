@@ -4,14 +4,11 @@ import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { useState } from "react";
-import { AiOutlineExpandAlt } from "react-icons/ai";
 import { FaExternalLinkAlt } from "react-icons/fa";
 function NavbarLinks() {
-  const [showMore, setShowMore] = useState("false");
   const pathName = usePathname();
   return (
-    <div className="flex flex-auto justify-between justify-items-center gap-4 px-2 align-middle">
+    <div className="grid grid-cols-2 justify-between justify-items-center gap-4 px-2 align-middle sm:flex sm:flex-row">
       <Link
         className={clsx(
           "hover:border-b-2",

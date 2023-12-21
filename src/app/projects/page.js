@@ -22,7 +22,7 @@ function page() {
         </div>
       </section>
       <section id="selected-work" className="m-20">
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-12">
           <div className="flex w-full flex-row justify-between">
             <h2 className=" text-4xl font-bold text-white">
               Get in contact to start a new project today

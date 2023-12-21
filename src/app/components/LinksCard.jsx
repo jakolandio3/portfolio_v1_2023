@@ -15,8 +15,8 @@ function LinksCard() {
           Checkout some of my socials
         </p>
         <div
-          className="mb-[150px] rounded-full 
-   border border-dashed border-gray-500"
+          className="rounded-full border 
+   border-dashed border-gray-500 md:mb-[150px]"
         >
           <div className="relative flex h-full content-center items-center justify-center gap-8 self-center p-5 text-5xl">
             <div

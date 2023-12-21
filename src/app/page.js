@@ -5,7 +5,6 @@ import Link from "next/link";
 import List from "./library/AppList";
 import Image from "next/image";
 
-import TechCardSmall from "./components/TechCardSmall";
 import {
   SiCss3,
   SiGithub,
@@ -24,22 +23,22 @@ function app() {
 
   return (
     <main className="w-full">
-      <section id="title-card" className="mb-[15vh] pb-8">
-        <div className="ml-20 mr-auto flex h-[80vh] flex-col justify-center justify-items-center text-left text-primary-text-color">
+      <section id="title-card" className="pb-8 md:mb-[15vh]">
+        <div className="mr-auto flex h-[80vh] flex-col justify-center justify-items-center text-left text-primary-text-color md:ml-20">
           <h1
             id="name-header"
-            className="pt-20 text-7xl font-bold text-secondary-text-color"
+            className="text-7xl font-bold text-secondary-text-color md:pt-20"
           >
             Hi👋,
           </h1>
-          <h1 className="text-7xl font-bold">
+          <h1 className="pb-8 text-7xl font-bold md:pb-0">
             <span id="name-header" className="text-secondary-text-color">
               I'm{" "}
             </span>
-            Jakob Douglas
+            Jakob <span className="hidden md:block">Douglas</span>
           </h1>
 
-          <p className="mr-auto max-w-[80%] py-5 text-left italic">
+          <p className="mr-auto hidden max-w-[80%] py-5 text-left italic sm:block">
             Im a Full-Stack Web developer specializing in creating web-based
             apps, <br /> and working with frameworks such as NextJs and React
           </p>
@@ -58,10 +57,10 @@ function app() {
         </div>
       </section>
       <section id="selected-work" className="w-[full] overflow-hidden">
-        <div className="flex flex-col items-center justify-center gap-5">
-          <h2 className="flex w-[80%] justify-around pb-5 text-6xl font-bold text-primary-text-color">
+        <div className="flex flex-col items-center justify-center gap-8">
+          <h2 className="flex flex-col justify-around gap-5 pb-5 text-6xl font-bold text-primary-text-color md:w-[80%] md:flex-row md:gap-0">
             Selected Work{" "}
-            <span className="text-lg">
+            <span className="text-center text-lg">
               <Button scroll={true} to="projects">
                 View All..
               </Button>
@@ -120,12 +119,12 @@ function app() {
       </section>
       <section
         id="title-card"
-        className="m-20 my-[10vh] flex flex-col items-center gap-5"
+        className="my-[10vh] flex flex-col items-center gap-5 md:m-20"
       >
-        <h2 className=" w-[80%] justify-center pb-[20px] text-6xl font-bold text-primary-text-color">
+        <h2 className=" justify-center pb-[20px] text-6xl font-bold text-primary-text-color md:w-[80%]">
           Get to know me
         </h2>
-        <div className="grid grid-flow-row grid-cols-2 gap-5">
+        <div className="grid grid-flow-row gap-5 md:grid-cols-2">
           <SectionCard
             title="About Me"
             blurb="Who I am and what I do"
@@ -160,7 +159,7 @@ function app() {
             link="techStack"
           >
             {
-              <div className=" mx-12 grid h-full grid-flow-row grid-cols-4 items-center justify-items-center gap-1 overflow-hidden py-10 text-center text-4xl text-white">
+              <div className=" grid grid-flow-row grid-cols-3 justify-items-center gap-8 overflow-hidden text-center text-4xl text-white md:mx-12 md:h-full md:grid-cols-4 md:items-center md:gap-1 md:py-10">
                 <SiHtml5 />
                 <SiCss3 />
                 <SiJavascript />
@@ -188,7 +187,7 @@ function app() {
           </SectionCard>
         </div>
       </section>
-      <section id="contact" className="m-20">
+      <section id="contact" className="md:m-20">
         <div className="flex flex-row justify-between">
           <div className="flex h-full flex-col justify-center justify-items-center text-left text-primary-text-color">
             <h1 className="pt-10 text-4xl font-bold text-primary-text-color">
@@ -201,7 +200,7 @@ function app() {
             </p>
           </div>
 
-          <div className="flex min-w-[200px] flex-nowrap self-center text-center">
+          <div className=" min-w-fit self-center text-center md:flex md:min-w-[200px]">
             <Button to="/contact">&rarr; Get in touch</Button>
           </div>
         </div>
