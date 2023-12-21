@@ -3,13 +3,51 @@
 @tailwind utilities;
 
 :root {
+  transition: all 5s ease-in-out;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   &::-webkit-scrollbar {
+    display: none;
     overflow: hidden;
     scroll-behavior: smooth;
     width: 0;
+  }
+  --primary-color: #000;
+  --secondary-color: #78716c;
+  --text-primary-color: #f4f4f4;
+  --text-secondary-color: #78716c;
+  --nav-text-color: #ef4444;
+  --sun-color: #fde047;
+  --button-bg: #f4f4f4;
+  --button-text: #000;
+  --text-field-bg: #1c1917;
+  --text-field-text: #f4f4f4;
+  &.light-mode {
+    transition: all 5s ease-in-out;
+    --primary-color: #3b82f6;
+    --secondary-color: #15803d;
+    --text-primary-color: #f4f4f4;
+    --text-secondary-color: #15803d;
+    --nav-text-color: #06b6d4;
+    --sun-color: #f59e0b;
+    --button-bg: #15803d;
+    --button-text: #dcfce7;
+    --text-field-bg: #06b6d4;
+    --text-field-text: #000;
+  }
+  &.dark-mode {
+    transition: all 5s ease-in-out;
+    --primary-color: #000;
+    --secondary-color: #78716c;
+    --text-primary-color: #f4f4f4;
+    --text-secondary-color: #78716c;
+    --nav-text-color: #ef4444;
+    --sun-color: #fde047;
+    --button-bg: #f4f4f4;
+    --button-text: #000;
+    --text-field-bg: #1c1917;
+    --text-field-text: #f4f4f4;
   }
 }
 
@@ -18,5 +56,17 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  @variants responsive {
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
   }
 }
