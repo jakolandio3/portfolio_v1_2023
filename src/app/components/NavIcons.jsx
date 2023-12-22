@@ -14,7 +14,7 @@ function NavIcons() {
       </Link>
       <Link
         target="_Blank"
-        href={"www.linkedin.com/in/jakob-douglas-0389282a5"}
+        href={"https://www.linkedin.com/in/jakob-douglas-0389282a5"}
       >
         <SiLinkedin />
       </Link>

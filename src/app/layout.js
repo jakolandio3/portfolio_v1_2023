@@ -17,10 +17,10 @@ export default function RootLayout({ children }) {
       <body
         className={clsx(
           inter.className,
-          "bg-primary-color m-0 px-5 transition-all duration-1000 ease-in-out ",
+          "m-0 flex w-full justify-center bg-primary-color px-5 transition-all duration-1000 ease-in-out ",
         )}
       >
-        <main className=" top-0 m-0 flex h-full min-h-screen flex-col  justify-between p-0 ">
+        <main className=" top-0 m-0 flex h-full min-h-screen w-[1400px] flex-col justify-between  self-center p-0 ">
           {" "}
           <Navbar />
           <div className=" flex w-full items-center justify-center self-center">

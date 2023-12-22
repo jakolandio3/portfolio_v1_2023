@@ -1,5 +1,5 @@
 import LogoImg from "./LogoImg";
-import Modal from "./Modal";
+
 import NavIcons from "./NavIcons";
 import NavbarLinks from "./NavbarLinks";
 

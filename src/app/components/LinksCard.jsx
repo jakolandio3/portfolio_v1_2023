@@ -16,7 +16,7 @@ function LinksCard() {
         </p>
         <div
           className="rounded-full border 
-   border-dashed border-gray-500 md:mb-[150px]"
+   border-dashed border-gray-500 md:mb-[80px]"
         >
           <div className="relative flex h-full content-center items-center justify-center gap-8 self-center p-5 text-5xl">
             <div
@@ -33,7 +33,10 @@ function LinksCard() {
               <SiGithub />
             </Link>
 
-            <Link href={"/"}>
+            <Link
+              target="_blank"
+              href={"https://www.linkedin.com/in/jakob-douglas-0389282a5"}
+            >
               <SiLinkedin />
             </Link>
           </div>

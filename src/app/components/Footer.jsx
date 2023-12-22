@@ -3,7 +3,7 @@ import LogoImg from "./LogoImg";
 
 function Footer({ children }) {
   return (
-    <footer className=" border-t-secondary-color text-primary-text-color mt-20 flex justify-around border-t-2 border-dashed border-opacity-20 pt-8">
+    <footer className=" mt-20 flex justify-around border-t-2 border-dashed border-t-secondary-color border-opacity-20 pt-8 text-primary-text-color">
       <div className="z-10 mb-4 flex flex-col justify-between">
         <ul>
           <LogoImg />
@@ -56,7 +56,7 @@ function Footer({ children }) {
               {" "}
               <Link
                 className=" hover:border-b-2"
-                href={"www.google.com"}
+                href={"https://www.linkedin.com/in/jakob-douglas-0389282a5"}
                 target="_blank"
               >
                 LinkedIn

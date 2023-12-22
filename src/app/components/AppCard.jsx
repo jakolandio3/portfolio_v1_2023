@@ -15,13 +15,13 @@ function AppCard({
       style={{
         backgroundImage: "url(" + bannerImg + ")",
       }}
-      className=" z-10 flex flex-row rounded-3xl border border-solid border-gray-500 bg-gray-800
-   bg-cover  px-5 pb-0.5 pt-5 opacity-70 transition-all duration-500 ease-in-out hover:opacity-100 hover:shadow-[0px_0px_150px_rgba(255,0,0,0.25),-50px_0px_150px_rgba(0,0,255,0.25),50px_0px_150px_rgba(255,255,0,0.25)] hover:blur-0 md:m-16 md:w-[50vw]"
+      className=" z-10 flex w-full flex-row rounded-3xl border border-solid border-gray-500
+   bg-gray-800   bg-cover p-2 opacity-70 transition-all duration-500 ease-in-out hover:opacity-100 hover:shadow-[0px_0px_150px_rgba(255,0,0,0.25),-50px_0px_150px_rgba(0,0,255,0.25),50px_0px_150px_rgba(255,255,0,0.25)] hover:blur-0"
     >
       <div
         className={clsx(
-          "blur-xs mr-5 flex w-[80vw] flex-col items-center gap-5 overflow-hidden rounded-xl md:h-[60vh] md:w-[110%] md:justify-between md:gap-0 ",
-          whiteBG === true && "bg-black bg-opacity-70 px-[2px]",
+          "blur-xs flex w-[100%] flex-col  items-center self-center overflow-hidden rounded-xl p-2 md:h-[100%] md:justify-between md:gap-0 ",
+          whiteBG === true && "bg-black bg-opacity-70 ",
         )}
       >
         <>

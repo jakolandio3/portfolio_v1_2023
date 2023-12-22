@@ -31,11 +31,11 @@ function ContactForm() {
   };
   return (
     <div
-      className="flex flex-col items-center justify-center rounded-3xl border border-dashed border-secondary-color 
-   bg-primary-color px-5 pb-0.5 pt-5 text-center shadow-[0px_0px_150px_rgba(255,0,0,0.25),-50px_0px_150px_rgba(0,0,255,0.25),50px_0px_150px_rgba(255,255,0,0.25)] transition-all duration-1000 ease-in-out"
+      className="flex w-full flex-col items-center justify-center rounded-3xl border border-dashed 
+   border-secondary-color bg-primary-color px-5 pb-0.5 pt-5 text-left shadow-[0px_0px_150px_rgba(255,0,0,0.25),-50px_0px_150px_rgba(0,0,255,0.25),50px_0px_150px_rgba(255,255,0,0.25)] transition-all duration-1000 ease-in-out md:w-[80%]"
     >
-      <form onSubmit={handleSubmit} className="flex flex-col md:w-[50vw]">
-        <h1 className=" my-6 w-full border-b border-dashed border-secondary-color text-3xl">
+      <form onSubmit={handleSubmit} className="flex flex-col md:w-full">
+        <h1 className=" my-6 w-full border-b border-dashed border-secondary-color text-center text-3xl">
           {" "}
           Send a Message 📧{" "}
         </h1>
@@ -84,7 +84,7 @@ function ContactForm() {
           Message<span className="text-red-500">*</span>
         </label>
         <textarea
-          className="focus:ring-offset border-gray-500p-2 m-3 min-h-[20vh] rounded-lg border bg-text-field-bg text-text-field-text transition-all duration-1000 ease-in-out placeholder:italic placeholder:text-primary-text-color placeholder:opacity-60 focus:outline-none focus:ring focus:ring-blue-700 focus:ring-opacity-30 focus:ring-offset-secondary-color"
+          className="focus:ring-offset m-3 min-h-[150px] rounded-lg border border-gray-500 bg-text-field-bg p-2 text-text-field-text transition-all duration-1000 ease-in-out placeholder:italic placeholder:text-primary-text-color placeholder:opacity-60 focus:outline-none focus:ring focus:ring-blue-700 focus:ring-opacity-30 focus:ring-offset-secondary-color"
           name="message"
           value={message}
           placeholder="Enter your message Here"
@@ -100,7 +100,7 @@ function ContactForm() {
             </h1>
           )}
           <button
-            className="m-3 w-[10vw] rounded-full border border-dashed p-2  px-5 shadow shadow-text-field-text transition-all duration-500 ease-in-out hover:border-solid hover:bg-text-field-bg"
+            className="m-3 w-[30%] rounded-full border border-dashed p-2  px-5 shadow shadow-text-field-text transition-all duration-500 ease-in-out hover:border-solid hover:bg-text-field-bg"
             type="submit"
           >
             Send
