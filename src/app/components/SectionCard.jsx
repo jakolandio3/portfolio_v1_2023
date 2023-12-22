@@ -20,7 +20,7 @@ function SectionCard({
             <p className=" pb-5 pt-1 text-white opacity-40 md:pb-10">{blurb}</p>
           </div>
 
-          <div className="relative flex h-[200px] justify-center overflow-hidden md:m-10 md:block md:h-[300px]">
+          <div className="relative flex h-[200px] justify-center overflow-hidden md:m-10 md:block lg:h-[300px]">
             {children}
             {image !== "" && (
               <Image

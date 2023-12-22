@@ -59,7 +59,7 @@ const List = [
       },
     ],
     techStack: ["JS", "CSS", "HTML5"],
-    website: "https://the-wild-oasis-jd23.netlify.app/login",
+    website: "https://portfolio-v1-2023.vercel.app/",
     gitHub: "https://github.com/jakolandio3/The-Wild-Oasis/tree/main",
     bannerImg: "/wild-oasis-bg.png",
     light: true,
