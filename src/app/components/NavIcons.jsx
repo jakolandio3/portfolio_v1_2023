@@ -7,16 +7,17 @@ function NavIcons() {
   return (
     <div
       id="name-header"
-      className="relative flex h-full content-center items-center justify-center gap-4 self-center px-2 text-2xl"
+      className="relative mr-5 flex h-full content-center items-center justify-center gap-4 self-center px-2 text-2xl"
     >
       <Link target="_Blank" href={"https://github.com/jakolandio3"}>
         <SiGithub />
       </Link>
-      <Link href={"/"}>
+      <Link
+        target="_Blank"
+        href={"https://www.linkedin.com/in/jakob-douglas-0389282a5"}
+      >
         <SiLinkedin />
       </Link>
-      |
-      <LightMode />
     </div>
   );
 }
