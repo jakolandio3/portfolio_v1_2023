@@ -8,12 +8,12 @@ import { SiGithub } from "react-icons/si";
 
 function page() {
   return (
-    <div>
+    <div className="flex flex-col md:w-[80%]">
       <section
         id="title-card"
-        className="mt-[15vh] border-b border-dashed border-gray-500 border-opacity-20 pb-8"
+        className="mb-[80px] mt-[180px] border-b border-dashed border-gray-500 border-opacity-20 pb-8"
       >
-        <div className="ml-20 mr-auto flex h-full flex-col justify-center justify-items-center text-left text-white">
+        <div className="flex h-full flex-col justify-center justify-items-center text-left text-white">
           <h1 className="text-7xl font-bold">Projects</h1>
 
           <p className="mr-auto max-w-[80%] py-5 text-left opacity-40">
@@ -21,10 +21,10 @@ function page() {
           </p>
         </div>
       </section>
-      <section id="selected-work" className="m-20">
+      <section id="selected-work">
         <div className="flex flex-col gap-12">
           <div className="flex w-full flex-row justify-between">
-            <h2 className=" text-4xl font-bold text-white">
+            <h2 className=" font-bold text-white md:text-4xl">
               Get in contact to start a new project today
             </h2>
             <Button className="w-fit text-xs" to="/contact">

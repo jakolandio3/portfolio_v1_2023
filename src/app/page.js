@@ -22,9 +22,12 @@ function app() {
   const topApps = List.slice(0, 3);
 
   return (
-    <main className="w-full">
-      <section id="title-card" className="pb-8 md:mb-[15vh]">
-        <div className="mr-auto flex h-[80vh] flex-col justify-center justify-items-center text-left text-primary-text-color md:ml-20">
+    <main className="w-full flex-col justify-center md:flex">
+      <section
+        id="title-card"
+        className="flex justify-center self-center pb-8 md:mb-[15vh] md:w-[80%]"
+      >
+        <div className="mr-auto flex h-[80vh] w-[80%] flex-col justify-center justify-items-center text-left text-primary-text-color ">
           <h1
             id="name-header"
             className="text-7xl font-bold text-secondary-text-color md:pt-20"
@@ -35,7 +38,7 @@ function app() {
             <span id="name-header" className="text-secondary-text-color">
               I'm{" "}
             </span>
-            Jakob <span className="hidden md:block">Douglas</span>
+            Jakob <span className="hidden md:inline-block">Douglas</span>
           </h1>
 
           <p className="mr-auto hidden max-w-[80%] py-5 text-left italic sm:block">
@@ -56,10 +59,13 @@ function app() {
           </div>
         </div>
       </section>
-      <section id="selected-work" className="w-[full] overflow-hidden">
-        <div className="flex flex-col items-center justify-center gap-8">
-          <h2 className="flex flex-col justify-around gap-5 pb-5 text-6xl font-bold text-primary-text-color md:w-[80%] md:flex-row md:gap-0">
-            Selected Work{" "}
+      <section
+        id="selected-work"
+        className="flex w-full justify-center self-center md:w-[80%]"
+      >
+        <div className="flex w-full flex-col items-center justify-between gap-8">
+          <h2 className="flex w-full flex-col justify-between gap-5 pb-5 text-6xl font-bold text-primary-text-color md:flex-row">
+            <p>Selected Work</p>
             <span className="text-center text-lg">
               <Button scroll={true} to="projects">
                 View All..
@@ -119,12 +125,12 @@ function app() {
       </section>
       <section
         id="title-card"
-        className="my-[10vh] flex flex-col items-center gap-5 md:m-20"
+        className="my-[10vh] flex flex-col items-center gap-8 self-center md:w-[80%] "
       >
-        <h2 className=" justify-center pb-[20px] text-6xl font-bold text-primary-text-color md:w-[80%]">
+        <h2 className="flex w-full  pb-[20px] text-left text-6xl font-bold text-primary-text-color md:w-[100%]">
           Get to know me
         </h2>
-        <div className="grid grid-flow-row gap-5 md:grid-cols-2">
+        <div className="grid w-[100%] grid-flow-row gap-5 md:grid-cols-2">
           <SectionCard
             title="About Me"
             blurb="Who I am and what I do"
@@ -139,20 +145,7 @@ function app() {
               />
             }
           </SectionCard>
-          <SectionCard
-            title="Projects"
-            blurb="Projects, Components and proofs on concepts that im working on"
-            link="projects"
-          >
-            {
-              <Image
-                className=" invert"
-                src={"/projects.svg"}
-                alt="https://www.freepik.com/icon/graphic-design_1448180"
-                fill={true}
-              />
-            }
-          </SectionCard>
+
           <SectionCard
             title="Tech Stack"
             blurb="My development toolkit"
@@ -171,30 +164,16 @@ function app() {
               </div>
             }
           </SectionCard>
-          <SectionCard
-            title="Contact Me"
-            blurb="Send me a message so we can work together 😀"
-            link="contact"
-          >
-            {
-              <Image
-                className=" invert"
-                src={"/envelope-plus_5070398.svg"}
-                alt="https://www.freepik.com/icon/book_10089799#fromView=resource_detail&position=26"
-                fill={true}
-              />
-            }
-          </SectionCard>
         </div>
       </section>
-      <section id="contact" className="md:m-20">
-        <div className="flex flex-row justify-between">
+      <section id="contact" className="flex self-center  md:w-[80%] ">
+        <div className="flex flex-row justify-between md:w-[100%]">
           <div className="flex h-full flex-col justify-center justify-items-center text-left text-primary-text-color">
-            <h1 className="pt-10 text-4xl font-bold text-primary-text-color">
+            <h1 className="text-4xl font-bold text-primary-text-color md:pt-10">
               Lets work together
             </h1>
 
-            <p className="mr-auto max-w-[50%] py-5 text-left opacity-40">
+            <p className="mr-auto hidden max-w-[50%] py-5 text-left opacity-40 md:block">
               Send me a message to get in contact and we can start working
               together.
             </p>

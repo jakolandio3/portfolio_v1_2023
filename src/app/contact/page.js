@@ -9,7 +9,7 @@ function page() {
       title={"Get in touch"}
       blurb={"Reach out so we can get started on something great"}
     >
-      <div className="flex flex-col gap-8">
+      <div className="flex w-full flex-col items-center justify-center gap-8">
         <ContactForm />
         <LinksCard />
       </div>
