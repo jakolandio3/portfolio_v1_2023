@@ -8,7 +8,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 function NavbarLinks() {
   const pathName = usePathname();
   return (
-    <div className="grid grid-cols-2 justify-between justify-items-center gap-4 px-2 align-middle sm:flex sm:flex-row">
+    <div className="grid grid-cols-2 justify-between justify-items-center gap-4 px-2 align-middle sm:flex sm:flex-row ">
       <Link
         className={clsx(
           "hover:border-b-2",
