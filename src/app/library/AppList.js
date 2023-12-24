@@ -258,8 +258,7 @@ const List = [
       },
     ],
     techStack: ["React", "Redux", "Vite", "tailwind"],
-    website:
-      "https://fast-react-pizza-7gritbzny-jakobs-projects-a58f329a.vercel.app/",
+    website: "https://fast-react-pizza-app.vercel.app/",
     gitHub: "https://github.com/jakolandio3/fast-react-pizza-app",
     bannerImg: "",
     light: false,
