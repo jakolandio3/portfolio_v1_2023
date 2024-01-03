@@ -36,11 +36,27 @@ function AppCard({
                       ? "bg-blue-300"
                       : tech === "HTML5"
                         ? "bg-red-500"
-                        : "bg-green-500",
+                        : tech === "NODEJS"
+                          ? "bg-green-500"
+                          : tech === "React"
+                            ? "bg-blue-500"
+                            : tech === "Redux"
+                              ? "bg-purple-500"
+                              : tech === "Vite"
+                                ? "bg-yellow-300"
+                                : tech === "tailwind"
+                                  ? "bg-blue-900"
+                                  : tech === "Json-Server"
+                                    ? "bg-orange-500"
+                                    : tech === "WebPack"
+                                      ? "bg-red-900"
+                                      : tech === "CSS-Modules"
+                                        ? "bg-red-500"
+                                        : "",
                 )}
                 key={tech}
               >
-                {tech}
+                {/* {tech} */}
               </p>
             ))}
           </div>

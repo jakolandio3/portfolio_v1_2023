@@ -9,11 +9,11 @@ function Footer({ children }) {
           <LogoImg />
 
           <p className=" mt-4 text-xs font-extralight opacity-30">
-            Thanks for eating cake
+            Thanks for viewing my site
           </p>
         </ul>
         <p className=" text-xs font-extralight opacity-30">
-          &copy; 2023 Jakob Douglas. All Rights Reserved
+          &copy; 2024 Jakob Douglas. All Rights Reserved
         </p>
       </div>
       <div className="mb-[20px] flex justify-center gap-20">
