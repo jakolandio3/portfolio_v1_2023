@@ -152,7 +152,7 @@ function app() {
             link="techStack"
           >
             {
-              <div className=" grid grid-flow-row grid-cols-3 justify-items-center gap-8 overflow-hidden text-center text-2xl text-white md:h-full md:grid-cols-4 md:items-center md:gap-1 md:text-4xl lg:mx-12 lg:py-10">
+              <div className=" grid grid-flow-row grid-cols-3 justify-items-center gap-8 overflow-hidden text-center text-2xl text-white md:h-full md:grid-cols-4 md:items-center md:gap-1  md:text-4xl lg:mx-12 lg:py-10">
                 <SiHtml5 />
                 <SiCss3 />
                 <SiJavascript />

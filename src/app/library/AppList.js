@@ -365,7 +365,7 @@ const List = [
         title: "Set Daily Limit",
       },
     ],
-    techStack: ["JavaScript", "CSS", "WebPack"],
+    techStack: ["JS", "CSS", "WebPack"],
     website: "https://merry-basbousa-be2432.netlify.app/",
     gitHub: "https://github.com/jakolandio3/tracalorie-webpack",
     bannerImg: "/track-calorie/add-meals-and-workouts.png",
