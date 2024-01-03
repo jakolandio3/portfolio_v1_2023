@@ -56,7 +56,7 @@ function Footer({ children }) {
               {" "}
               <Link
                 className=" hover:border-b-2"
-                href={"https://www.linkedin.com/in/jakob-douglas-0389282a5"}
+                href={"https://www.linkedin.com/in/jakob-douglas"}
                 target="_blank"
               >
                 LinkedIn

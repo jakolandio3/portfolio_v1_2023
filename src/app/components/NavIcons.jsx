@@ -12,10 +12,7 @@ function NavIcons() {
       <Link target="_Blank" href={"https://github.com/jakolandio3"}>
         <SiGithub />
       </Link>
-      <Link
-        target="_Blank"
-        href={"https://www.linkedin.com/in/jakob-douglas-0389282a5"}
-      >
+      <Link target="_Blank" href={"https://www.linkedin.com/in/jakob-douglas"}>
         <SiLinkedin />
       </Link>
     </div>
