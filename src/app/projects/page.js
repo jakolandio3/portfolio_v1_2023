@@ -23,8 +23,8 @@ function page() {
       </section>
       <section id="selected-work">
         <div className="flex flex-col gap-12">
-          <div className="flex w-full flex-row justify-between">
-            <h2 className=" font-bold text-white md:text-4xl">
+          <div className="flex w-full flex-col items-center justify-between gap-5 lg:flex-row lg:gap-0">
+            <h2 className=" font-bold text-white md:text-2xl lg:text-4xl">
               Get in contact to start a new project today
             </h2>
             <Button className="w-fit text-xs" to="/contact">
