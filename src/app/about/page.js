@@ -21,7 +21,7 @@ function page() {
             <p className="text-md font-thin opacity-90">
               My name is Jakob Douglas, I'm 28 years old from Adelaide, South
               Australia and I enjoy learning how things work and then creating
-              amazing things with this knowledge
+              amazing things with this knowledge.
             </p>
           </div>
           <div className="pb-3">
@@ -52,7 +52,7 @@ function page() {
           <div className="pb-10">
             <p className="text-md font-thin opacity-90">
               I look forward to the future of this field and working with some
-              amazing people
+              amazing people.
             </p>
           </div>
           <div>
