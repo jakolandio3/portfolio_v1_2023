@@ -27,19 +27,27 @@ function app() {
         id="title-card"
         className="flex justify-center self-center pb-8 md:mb-[15vh] md:w-[80%]"
       >
-        <div className="mr-auto flex h-[80vh] w-[80%] flex-col justify-center justify-items-center text-left text-primary-text-color ">
+        <div className="flex h-[80vh] flex-col justify-center justify-items-center text-left text-primary-text-color md:mr-auto md:w-[80%] ">
           <h1
             id="name-header"
             className="text-7xl font-bold text-secondary-text-color md:pt-20"
           >
             Hi👋,
           </h1>
-          <h1 className="pb-8 text-7xl font-bold md:pb-0">
+          <h1 className="pb-3 text-7xl font-bold sm:pb-8 md:pb-0">
             <span id="name-header" className="text-secondary-text-color">
               I'm{" "}
             </span>
             Jakob <span className="hidden md:inline-block">Douglas</span>
           </h1>
+          <p className="mr-auto max-w-[80%] py-5 text-left text-xs italic sm:hidden md:hidden">
+            Full-Stack Web developer working with frameworks such as NextJs and
+            React.
+          </p>
+          <p className=" pb-3 text-xs opacity-80 md:mt-5">
+            <div className="badge badge-accent badge-xs"></div> Open to work in
+            2024
+          </p>
 
           <p className="mr-auto hidden max-w-[80%] py-5 text-left italic sm:block">
             Im a Full-Stack Web developer specializing in creating web-based
