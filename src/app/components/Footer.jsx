@@ -4,16 +4,16 @@ import LogoImg from "./LogoImg";
 function Footer({ children }) {
   return (
     <footer className=" mt-20 flex justify-around border-t-2 border-dashed border-t-secondary-color border-opacity-20 pt-8 text-primary-text-color">
-      <div className="z-10 mb-4 flex flex-col justify-between">
+      <div className="z-10 mb-4 mr-3 flex flex-col justify-between md:mr-0">
         <ul>
           <LogoImg />
 
-          <p className=" mt-4 text-xs font-extralight opacity-30">
+          <p className=" mt-4 w-1/2 text-xs font-extralight opacity-30 md:w-full">
             Thanks for viewing my site
           </p>
         </ul>
         <p className=" text-xs font-extralight opacity-30">
-          &copy; 2024 Jakob Douglas. All Rights Reserved
+          &copy; 2024 Jakob Douglas. <br /> All Rights Reserved
         </p>
       </div>
       <div className="mb-[20px] flex justify-center gap-20">
