@@ -68,18 +68,6 @@ function ContactForm() {
           Subject<span className="text-red-500">*</span>
         </label>
 
-        <input
-          placeholder="Please enter a subject line"
-          className=" focus:ring-offset  m-3 rounded-lg border border-gray-500 bg-transparent p-2 text-text-field-text transition-all duration-1000 ease-in-out placeholder:italic placeholder:text-primary-text-color placeholder:opacity-60 focus:bg-text-field-bg focus:outline-none focus:ring focus:ring-blue-700 focus:ring-opacity-30 focus:ring-offset-secondary-color"
-          type="text"
-          name="subject"
-          value={subject}
-          onChange={(e) => {
-            setSubject(e.target.value);
-          }}
-          required
-        />
-
         <label htmlFor="message">
           Message<span className="text-red-500">*</span>
         </label>

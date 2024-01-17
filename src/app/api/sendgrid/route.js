@@ -9,7 +9,7 @@ export async function POST(req, res) {
     await sgMail.send({
       to: "jakobdouglas.dev@gmail.com", // Your email where you'll receive emails
       from: "jakobdouglas.dev@gmail.com", // your website email address here
-      subject: `[Contact Form]${data.subject} `,
+      subject: `[Contact Form]`,
       html: `<div><h1>You've got a mail<h1/><p>Email from ${data.fullname} at ${data.email}</p><p>${data.message}</p></div>`,
     });
 
