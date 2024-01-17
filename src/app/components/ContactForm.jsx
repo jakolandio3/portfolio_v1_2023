@@ -64,9 +64,6 @@ function ContactForm() {
           }}
           required
         />
-        <label htmlFor="subject">
-          Subject<span className="text-red-500">*</span>
-        </label>
 
         <label htmlFor="message">
           Message<span className="text-red-500">*</span>
