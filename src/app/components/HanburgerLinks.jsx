@@ -5,11 +5,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
-function NavbarLinks() {
+function HamburgerLinks({ onChangeState }) {
   const pathName = usePathname();
   return (
     <div className="flex flex-col items-start justify-between justify-items-center gap-4 px-2 text-left text-2xl sm:flex sm:flex-row sm:align-middle sm:text-lg md:grid-cols-2 ">
       <Link
+        onClick={() => onChangeState(false)}
         className={clsx(
           "hover:border-b-2",
           pathName === "/"
@@ -21,6 +22,7 @@ function NavbarLinks() {
         Home
       </Link>
       <Link
+        onClick={() => onChangeState(false)}
         className={clsx(
           "hover:border-b-2",
           pathName === "/projects" &&
@@ -31,6 +33,7 @@ function NavbarLinks() {
         Work
       </Link>
       <Link
+        onClick={() => onChangeState(false)}
         className={clsx(
           "hover:border-b-2",
           pathName === "/about" &&
@@ -41,6 +44,7 @@ function NavbarLinks() {
         About
       </Link>
       <Link
+        onClick={() => onChangeState(false)}
         className={clsx(
           "hover:border-b-2",
           pathName === "/contact" &&
@@ -52,6 +56,7 @@ function NavbarLinks() {
       </Link>
 
       <Link
+        onClick={() => onChangeState(false)}
         className={clsx(
           "hover:border-b-2",
           pathName === "/techStack" &&
@@ -77,4 +82,4 @@ function NavbarLinks() {
   );
 }
 
-export default NavbarLinks;
+export default HamburgerLinks;

@@ -34,15 +34,15 @@ function app() {
           >
             Hi👋,
           </h1>
-          <h1 className="pb-3 text-7xl font-bold sm:pb-8 md:pb-0">
+          <h2 className="pb-3 text-7xl font-bold sm:pb-8 md:pb-0">
             <span id="name-header" className="text-secondary-text-color">
               I'm{" "}
             </span>
             Jakob <span className="hidden md:inline-block">Douglas</span>
-          </h1>
+          </h2>
           <p className="mr-auto max-w-[80%] py-5 text-left text-xs italic sm:hidden md:hidden">
-            Full-Stack Web developer working with frameworks such as NextJs and
-            React.
+            Full-Stack Software Engineer working with frameworks such as NextJs
+            and React.
           </p>
           <p className=" pb-3 text-xs opacity-80 md:mt-5">
             <div className="badge badge-accent badge-xs"></div> Open to work in
@@ -50,8 +50,9 @@ function app() {
           </p>
 
           <p className="mr-auto hidden max-w-[80%] py-5 text-left italic sm:block">
-            Im a Full-Stack Web developer specializing in creating web-based
-            apps, <br /> and working with frameworks such as NextJs and React
+            I'm a Full-Stack Software Engineer specializing in creating
+            web-based apps, <br /> Working with frameworks such as NextJs and
+            React
           </p>
 
           <div className="flex flex-row gap-5">
@@ -146,7 +147,7 @@ function app() {
           >
             {
               <Image
-                className=" invert"
+                className="object-contain invert"
                 src={"/userIcon.svg"}
                 alt="https://www.freepik.com/icon/profile_8459373"
                 fill={true}
