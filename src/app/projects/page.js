@@ -11,7 +11,7 @@ function page() {
     <div className="flex flex-col md:w-[80%]">
       <section
         id="title-card"
-        className="mb-[80px] mt-[180px] border-b border-dashed border-gray-500 border-opacity-20 pb-8"
+        className="mb-[80px] mt-[180px] border-b border-dashed border-gray-500 border-opacity-20 px-5 pb-8"
       >
         <div className="flex h-full flex-col justify-center justify-items-center text-left text-white">
           <h1 className="text-7xl font-bold">Projects</h1>
