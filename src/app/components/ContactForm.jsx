@@ -32,7 +32,7 @@ function ContactForm() {
   return (
     <div
       className="flex w-full flex-col items-center justify-center rounded-3xl border border-dashed 
-   border-secondary-color bg-primary-color px-5 pb-0.5 pt-5 text-left shadow-[0px_0px_150px_rgba(255,0,0,0.25),-50px_0px_150px_rgba(0,0,255,0.25),50px_0px_150px_rgba(255,255,0,0.25)] transition-all duration-1000 ease-in-out md:w-[80%]"
+   border-secondary-color bg-primary-color px-5 pb-0.5 pt-5 text-left shadow-[0px_80px_150px_rgba(255,0,0,0.25),-50px_80px_150px_rgba(0,0,255,0.25),50px_80px_150px_rgba(255,255,0,0.25)] transition-all duration-1000 ease-in-out md:w-[80%]"
     >
       <form onSubmit={handleSubmit} className="flex flex-col md:w-full">
         <h1 className=" my-6 w-full border-b border-dashed border-secondary-color text-center text-3xl">

@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body
         className={clsx(
           inter.className,
-          "m-0 flex w-full justify-center bg-primary-color px-5 transition-all duration-1000 ease-in-out ",
+          "m-0 flex w-full justify-center bg-primary-color transition-all duration-1000 ease-in-out ",
         )}
       >
         <div className=" top-0 m-0 flex h-full min-h-screen w-[1400px] flex-col justify-between  self-center p-0 ">

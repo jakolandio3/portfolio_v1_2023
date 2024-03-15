@@ -8,51 +8,80 @@ function page() {
       title={"Tech Stack"}
       blurb={"The Development tools in my arsenal"}
     >
-      <main className="flex w-full flex-col items-center gap-40">
-        <section className="flex flex-col items-center gap-5 md:w-[80%]">
-          <h2 className="ml-[10%] w-full text-4xl">Dev & Design</h2>
-          <div className="grid grid-flow-row grid-cols-3 gap-5">
+      <main className="mx-auto flex w-full flex-col items-center gap-32 px-12 ">
+        <section className="flex w-full flex-col items-center gap-8">
+          <h2 className="w-full text-4xl">Programming Languages</h2>
+          <div className="flex w-full grow flex-wrap justify-start gap-5">
             <TechCard
-              title="TailwindCSS"
-              blurb="Style"
-              image="/icons8-tailwindcss.svg"
+              className={""}
+              title="TypeScript"
+              blurb="Dev"
+              image="/ts-logo-256-1.svg"
             />
-            <TechCard title="CSS-3" blurb="Style" image="/icons8-css3.svg" />
-            <TechCard title="HTML-5" blurb="HTML" image="/icons8-html5.svg" />
             <TechCard
+              className={""}
               title="JavaScript"
               blurb="Dev"
               image="icons8-javascript.svg"
             />
+
+            <TechCard
+              className={""}
+              title="SassCSS"
+              blurb="style"
+              image="/icons8-sass.svg"
+            />
+            <TechCard
+              className={""}
+              title="CSS-3"
+              blurb="Style"
+              image="/icons8-css3.svg"
+            />
+            <TechCard
+              className={""}
+              title="HTML-5"
+              blurb="HTML"
+              image="/icons8-html5.svg"
+            />
+
+            <TechCard
+              className={""}
+              title="J-Query"
+              blurb="Dev"
+              image="/icons8-jquery.svg"
+            />
+          </div>
+        </section>
+
+        <section className="flex w-full flex-col items-center gap-8">
+          <h2 className="w-full text-4xl">Libraries & Frameworks</h2>
+          <div className="flex w-full flex-wrap justify-start gap-5">
+            <TechCard title="Next-JS" blurb="Dev" image="/Nextjs.svg" />
             <TechCard
               title="React-JS"
               blurb="Dev"
               image="icons8-react-js.svg"
             />
-            <TechCard title="Vite" blurb="Dev" image="/icons8-vite.svg" />
             <TechCard title="Vue" blurb="Dev" image="/icons8-vue-js.svg" />
-            <TechCard title="Next-JS" blurb="Dev" image="/Nextjs.svg" />
             <TechCard title="Node-JS" blurb="Dev" image="/icons8-node-js.svg" />
-
-            <TechCard title="React-Query" blurb="Dev" image="/image-19.svg" />
-            <TechCard title="J-Query" blurb="Dev" image="/icons8-jquery.svg" />
+            <TechCard title="Vite" blurb="Dev" image="/icons8-vite.svg" />
             <TechCard
-              title="TypeScript"
-              blurb="Dev"
-              image="/ts-logo-256-1.svg"
+              title="TailwindCSS"
+              blurb="Style"
+              image="/icons8-tailwindcss.svg"
             />
-
+            <TechCard title="React-Query" blurb="Dev" image="/image-19.svg" />
             <TechCard
               title="Styled Components"
               blurb="style"
               image="/styled.svg"
             />
-            <TechCard title="SassCSS" blurb="style" image="/icons8-sass.svg" />
+            <TechCard title="J-Query" blurb="Dev" image="/icons8-jquery.svg" />
           </div>
         </section>
-        <section className="flex flex-col items-center gap-5 md:w-[80%]">
-          <h2 className="ml-[10%] w-full  text-4xl">Apps</h2>
-          <div className="grid grid-flow-row grid-cols-3 gap-5">
+        <section className="flex w-full flex-col items-center gap-8">
+          <h2 className="w-full text-4xl">Apps</h2>
+          <div className="flex w-full flex-wrap justify-start gap-5">
             <TechCard
               title="Visual Studio Code"
               blurb="Dev"

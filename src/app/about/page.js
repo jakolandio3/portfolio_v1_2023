@@ -61,7 +61,7 @@ function page() {
         </main>
         <aside className="flex flex-col gap-20 p-5">
           <div className="flex items-center justify-center md:h-full">
-            <Button to="/contact">&rarr; Get in touch</Button>
+            <Button to="/contact">Get in touch &rarr;</Button>
           </div>
         </aside>
       </section>
