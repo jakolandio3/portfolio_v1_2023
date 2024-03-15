@@ -22,7 +22,7 @@ function app() {
   const topApps = List.slice(0, 3);
 
   return (
-    <main className="w-full flex-col justify-center md:flex">
+    <main className="w-full flex-col justify-center px-5 md:flex">
       <section
         id="title-card"
         className="flex justify-center self-center pb-8 md:mb-[15vh] md:w-[80%]"
@@ -44,26 +44,38 @@ function app() {
             Full-Stack Software Engineer working with frameworks such as NextJs
             and React.
           </p>
-          <p className=" pb-3 text-xs opacity-80 md:mt-5">
-            <div className="badge badge-accent badge-xs"></div> Open to work in
-            2024
+          <p className="flex items-center gap-2 pb-3 text-xs opacity-80 md:pt-5">
+            <span class="relative flex h-3 w-3">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-200 opacity-75"></span>
+              <span class="relative inline-flex h-3 w-3 rounded-full bg-teal-400"></span>
+            </span>{" "}
+            Open to work in 2024
           </p>
 
           <p className="mr-auto hidden max-w-[80%] py-5 text-left italic sm:block">
             I'm a Full-Stack Software Engineer specializing in creating
             web-based apps, <br /> Working with frameworks such as NextJs and
-            React
+            React{" "}
+            <Link
+              href="/about"
+              className="text-center font-bold italic text-yellow-400"
+            >
+              {" "}
+              ..Read more{" "}
+            </Link>
           </p>
 
-          <div className="flex flex-row gap-5">
-            <Button to="/about"> About me </Button>
-            <Button to="/contact"> Contact Me </Button>
+          <div className="flex gap-5 pt-10">
+            <Button to="/contact" className="text-center">
+              {" "}
+              Contact Me{" "}
+            </Button>
             <Link
               className="flex rounded-lg border border-button-text bg-sun-color p-3 font-bold text-button-text shadow-inner hover:text-black hover:shadow-gray-600"
               download={"resume"}
               href="/resume/JakobResume_2024.pdf"
             >
-              See my Resume {<FaCloudDownloadAlt />}
+              View my Resume
             </Link>
           </div>
         </div>
@@ -189,7 +201,7 @@ function app() {
           </div>
 
           <div className=" min-w-fit self-center text-center md:flex md:min-w-[200px]">
-            <Button to="/contact">&rarr; Get in touch</Button>
+            <Button to="/contact">Get in touch &rarr;</Button>
           </div>
         </div>
       </section>
