@@ -18,7 +18,7 @@ function NewProjectCard() {
           Let's turn your idea into a virtual reality
         </p>
         <div className="mb-[100px] w-[50%]">
-          <Button to="/contact"> &rarr; Get in touch </Button>
+          <Button to="/contact">Get in touch &rarr;</Button>
         </div>
       </div>
     </div>

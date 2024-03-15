@@ -3,7 +3,7 @@ function PageLayout({ children, title, blurb, extLinks }) {
     <div className="md:w-[80%]">
       <section
         id="title-card"
-        className="mt-[180px] w-full flex-col border-b border-dashed border-gray-500 border-opacity-20 bg-transparent pb-8 text-left text-white"
+        className="mt-[180px] w-full flex-col border-b border-dashed border-gray-500 border-opacity-20 bg-transparent px-5 pb-8 text-left text-white"
       >
         <div className=" flex h-full flex-col text-left text-white ">
           <h1 className="flex flex-col gap-5 text-7xl font-bold">
