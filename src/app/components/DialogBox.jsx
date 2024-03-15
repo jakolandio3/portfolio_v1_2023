@@ -5,7 +5,7 @@ import { useState } from "react";
 import HamburgerLinks from "./HanburgerLinks";
 
 function DialogDemo() {
-  const [isOpen, setIsOpen] = useState("false");
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
