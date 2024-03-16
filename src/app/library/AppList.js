@@ -160,7 +160,7 @@ const List = [
     ],
     techStack: ["JS", "CSS", "HTML5"],
     website: "https://phliexx-app.vercel.app/",
-    gitHub: "",
+    gitHub: "https://github.com/jakolandio3/phliexx-app",
     bannerImg: "/showcase-bg.jpg",
     light: false,
   },
