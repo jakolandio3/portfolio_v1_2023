@@ -73,7 +73,7 @@ function app() {
             <Link
               className="flex rounded-lg border border-button-text bg-sun-color p-3 font-bold text-button-text shadow-inner hover:text-black hover:shadow-gray-600"
               download={"resume"}
-              href="/resume/JakobResume_2024.pdf"
+              href="/resume/JakobResumepdf_2024.pdf"
             >
               View my Resume
             </Link>
