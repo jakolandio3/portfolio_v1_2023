@@ -2,7 +2,7 @@ import Button from "../components/Button";
 
 function page() {
   return (
-    <div className="md:w-[80%]">
+    <div className="px-5 md:w-[80%]">
       <section
         id="title-card"
         className="mt-[180px] border-b border-dashed border-gray-500 border-opacity-20 pb-8 md:mb-[80px]"
