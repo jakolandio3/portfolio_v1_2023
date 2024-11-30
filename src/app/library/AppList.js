@@ -298,8 +298,7 @@ const List = [
     ],
     techStack: ["React", "Json-Server", "tailwind"],
     website: "https://react-quiz-2023-seven.vercel.app/",
-    gitHub:
-      "https://github.com/jakolandio3/react-quiz-2023/tree/refactor/quiz-context",
+    gitHub: "https://github.com/jakolandio3/react-quiz-2023",
     bannerImg: "quiz-bg.png",
     light: true,
   },

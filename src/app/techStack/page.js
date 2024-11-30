@@ -56,7 +56,7 @@ function page() {
         <section className="flex w-full flex-col items-center gap-8">
           <h2 className="w-full text-4xl">Libraries & Frameworks</h2>
           <div className="flex w-full flex-wrap justify-start gap-5">
-            <TechCard title="Next-JS" blurb="Dev" image="/Nextjs.svg" />
+            <TechCard title="Next-JS" blurb="Dev" image="/nextjs.svg" />
             <TechCard
               title="React-JS"
               blurb="Dev"
