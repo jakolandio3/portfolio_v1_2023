@@ -21,7 +21,7 @@ function page() {
           </p>
         </div>
       </section>
-      <section className=" flex w-full items-center justify-center overflow-hidden py-[80px] text-white">
+      <section className=" flex w-full items-center justify-center overflow-hidden px-5 py-[80px] text-white">
         <div className="flex w-full flex-col items-center justify-center gap-8">
           <ContactForm />
           <LinksCard />
