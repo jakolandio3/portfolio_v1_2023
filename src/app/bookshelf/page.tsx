@@ -1,11 +1,11 @@
-import PageLayout from "../components/PageLayout";
+import PageLayout from '../components/PageLayout';
 
 function page() {
   return (
     <PageLayout
-      title={"Bookshelf"}
+      title={'Bookshelf'}
       blurb={
-        "A collecton of pieces that have been both enjopyable and inspirational"
+        'A collecton of pieces that have been both enjopyable and inspirational'
       }
     >
       <div className="mx-10 grid w-[80%] grid-flow-row grid-cols-4 items-center justify-center gap-7 text-center">

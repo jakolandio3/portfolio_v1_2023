@@ -1,18 +1,18 @@
-import Image from "next/image";
-import Button from "../components/Button";
-import PageLayout from "../components/PageLayout";
+import Image from 'next/image';
+import Button from '../components/Button';
+import PageLayout from '../components/PageLayout';
 
 function page() {
   return (
     <PageLayout
-      title={"Small-Projects"}
-      blurb={"Some small components and proofs of concept"}
+      title={'Small-Projects'}
+      blurb={'Some small components and proofs of concept'}
     >
       <div className="mx-20 flex w-full flex-col">
-        <Notes title="Dev" image={"/altumcode-dMUt0X3f59Q-unsplash.png"} />
+        <Notes title="Dev" image={'/altumcode-dMUt0X3f59Q-unsplash.png'} />
         <Notes
           title="Design"
-          image={"/nubelson-fernandes--Xqckh_XVU4-unsplash.png"}
+          image={'/nubelson-fernandes--Xqckh_XVU4-unsplash.png'}
         />
       </div>
     </PageLayout>
@@ -22,13 +22,13 @@ function page() {
 export default page;
 
 function Notes({
-  title = "add a title",
+  title = 'add a title',
   image,
   amount = 0,
-  blurb = "add a brief description",
+  blurb = 'add a brief description',
   imageTitle,
   date,
-  length,
+  length
 }: NotesProps) {
   return (
     <div className="flex w-full justify-center">
@@ -49,9 +49,9 @@ function Notes({
             />
 
             <div className="absolute bottom-0 z-10 h-fit w-full p-2 text-left hover:text-opacity-100">
-              <h2>{imageTitle ? imageTitle : "Add An Image title"}</h2>
+              <h2>{imageTitle ? imageTitle : 'Add An Image title'}</h2>
               <p className="text-xs italic">
-                {date ? date : "no date"} -{length ? length : "0"} min read
+                {date ? date : 'no date'} -{length ? length : '0'} min read
               </p>
             </div>
           </div>
@@ -59,7 +59,7 @@ function Notes({
         <aside className="flex flex-col  gap-3">
           <div>
             <h2 className="mb-5">
-              {amount} {amount > 0 ? "Notes" : "Note"}
+              {amount} {amount > 0 ? 'Notes' : 'Note'}
             </h2>
             <p className="text-xs">{blurb}</p>
           </div>

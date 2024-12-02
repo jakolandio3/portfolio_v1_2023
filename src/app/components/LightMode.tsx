@@ -1,7 +1,7 @@
-"use client";
-import { useCallback, useEffect, useState } from "react";
-import { MdOutlineWbSunny, MdWbSunny } from "react-icons/md";
-import { FaMoon } from "react-icons/fa";
+'use client';
+import { useCallback, useEffect, useState } from 'react';
+import { MdOutlineWbSunny, MdWbSunny } from 'react-icons/md';
+import { FaMoon } from 'react-icons/fa';
 
 function LightMode() {
   const [isLightMode, setIsLightmode] = useState(false);
@@ -10,11 +10,11 @@ function LightMode() {
   }, []);
   useEffect(() => {
     if (!isLightMode) {
-      document.documentElement.classList.add("dark-mode");
-      document.documentElement.classList.remove("light-mode");
+      document.documentElement.classList.add('dark-mode');
+      document.documentElement.classList.remove('light-mode');
     } else {
-      document.documentElement.classList.add("light-mode");
-      document.documentElement.classList.remove("dark-mode");
+      document.documentElement.classList.add('light-mode');
+      document.documentElement.classList.remove('dark-mode');
     }
   }, [isLightMode]);
   return (

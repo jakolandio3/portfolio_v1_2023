@@ -1,5 +1,5 @@
-import Link from "next/link";
-import LogoImg from "./LogoImg";
+import Link from 'next/link';
+import LogoImg from './LogoImg';
 
 function Footer() {
   return (
@@ -21,53 +21,53 @@ function Footer() {
           <ul>
             <h1 className="mb-4 font-extrabold">Links</h1>
             <div className=" font-extralight opacity-30">
-              {" "}
+              {' '}
               <li>
-                <Link className=" hover:border-b-2" href={"about"}>
+                <Link className=" hover:border-b-2" href={'about'}>
                   About
                 </Link>
               </li>
               <li>
-                <Link className=" hover:border-b-2" href={"work"}>
+                <Link className=" hover:border-b-2" href={'work'}>
                   Work
                 </Link>
               </li>
               <li>
-                <Link className=" hover:border-b-2" href={"techStack"}>
+                <Link className=" hover:border-b-2" href={'techStack'}>
                   Tech Stack
                 </Link>
               </li>
               <li>
-                <Link className=" hover:border-b-2" href={"contact"}>
+                <Link className=" hover:border-b-2" href={'contact'}>
                   Contact
                 </Link>
-              </li>{" "}
+              </li>{' '}
             </div>
           </ul>
           <ul>
             <h1 className="mb-4 font-extrabold">Elsewhere</h1>
             <div className=" font-extralight opacity-30">
               <li>
-                {" "}
-                <Link className=" hover:border-b-2" href={"contact"}>
+                {' '}
+                <Link className=" hover:border-b-2" href={'contact'}>
                   Email
                 </Link>
               </li>
               <li>
-                {" "}
+                {' '}
                 <Link
                   className=" hover:border-b-2"
-                  href={"https://www.linkedin.com/in/jakob-douglas"}
+                  href={'https://www.linkedin.com/in/jakob-douglas'}
                   target="_blank"
                 >
                   LinkedIn
                 </Link>
               </li>
               <li>
-                {" "}
+                {' '}
                 <Link
                   className=" hover:border-b-2"
-                  href={"https://github.com/jakolandio3"}
+                  href={'https://github.com/jakolandio3'}
                   target="_blank"
                 >
                   GitHub

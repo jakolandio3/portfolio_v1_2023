@@ -1,8 +1,8 @@
-"use client";
-import Image from "next/image";
-import { useState } from "react";
-import Lightbox from "yet-another-react-lightbox";
-import Zoom from "yet-another-react-lightbox/plugins/zoom";
+'use client';
+import Image from 'next/image';
+import { useState } from 'react';
+import Lightbox from 'yet-another-react-lightbox';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 
 function Gallery({ items }: GalleryProps) {
   const [open, setOpen] = useState(false);
@@ -27,7 +27,7 @@ function Gallery({ items }: GalleryProps) {
             <div className="relative h-full w-full">
               <div className=" absolute flex h-full w-full content-center items-center justify-center self-center bg-black">
                 <span className="loading loading-bars loading-lg"></span>
-              </div>{" "}
+              </div>{' '}
               <Image
                 onLoad={() => {
                   setLoading(false);
@@ -37,7 +37,7 @@ function Gallery({ items }: GalleryProps) {
                 width={400}
                 height={600}
                 src={item.imageUrl}
-              />{" "}
+              />{' '}
             </div>
           ) : (
             <Image
@@ -71,8 +71,8 @@ function buildLightBoxSlide(image: GalleryItem) {
       { src: image.imageUrl, width: 640, height: 426 },
       { src: image.imageUrl, width: 1200, height: 800 },
       { src: image.imageUrl, width: 2048, height: 1365 },
-      { src: image.imageUrl, width: 3840, height: 2560 },
-    ],
+      { src: image.imageUrl, width: 3840, height: 2560 }
+    ]
   };
 }
 

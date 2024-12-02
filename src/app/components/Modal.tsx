@@ -1,12 +1,12 @@
-"use client";
-import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import Button from "./Button";
+'use client';
+import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
+import Button from './Button';
 
 function Modal({
   content,
   modalName,
-  modalButton = "ModalButton-Placeholder",
+  modalButton = 'ModalButton-Placeholder'
 }: ModalProps) {
   const searchParams = useSearchParams();
   let showModal = searchParams.has(`modal_${modalName}`);
@@ -22,7 +22,7 @@ function Modal({
 
 export default Modal;
 
-function BoxModal({ content }: Pick<ModalProps, "content">) {
+function BoxModal({ content }: Pick<ModalProps, 'content'>) {
   return (
     <div
       id="modal1"

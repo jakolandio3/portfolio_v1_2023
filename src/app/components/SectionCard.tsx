@@ -1,12 +1,12 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 function SectionCard({
-  title = "Add title",
-  blurb = "placeholder, add a blurb",
-  image = "",
-  link = "/",
-  children,
+  title = 'Add title',
+  blurb = 'placeholder, add a blurb',
+  image = '',
+  link = '/',
+  children
 }: SectionCardProps) {
   return (
     <>
@@ -27,7 +27,7 @@ function SectionCard({
                 className="-scale-x-100 rounded-t-2xl "
                 fill={true}
                 sizes="full"
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: 'cover' }}
                 src={image}
                 alt="Phone"
               />

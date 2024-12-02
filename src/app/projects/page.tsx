@@ -1,10 +1,10 @@
-import { FaExternalLinkAlt } from "react-icons/fa";
-import AppCard from "../components/AppCard";
-import Button from "../components/Button";
-import NewProjectCard from "../components/NewProjectCard";
-import Link from "next/link";
-import { AppList } from "../library/AppList";
-import { SiGithub } from "react-icons/si";
+import { FaExternalLinkAlt } from 'react-icons/fa';
+import AppCard from '../components/AppCard';
+import Button from '../components/Button';
+import NewProjectCard from '../components/NewProjectCard';
+import Link from 'next/link';
+import { AppList } from '../library/AppList';
+import { SiGithub } from 'react-icons/si';
 
 function page() {
   return (
@@ -72,7 +72,7 @@ function page() {
                       href={`/projects/${app.name}`}
                       className="text-xl text-white opacity-80 hover:opacity-100 "
                     >
-                      {"Gallery.."}
+                      {'Gallery..'}
                     </Link>
                   </div>
                 </div>

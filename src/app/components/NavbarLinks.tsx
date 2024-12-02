@@ -1,73 +1,73 @@
-"use client";
+'use client';
 
-import clsx from "clsx";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import clsx from 'clsx';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt } from 'react-icons/fa';
 function NavbarLinks() {
   const pathName = usePathname();
   return (
     <div className="grid grid-cols-2 justify-between justify-items-center gap-4 px-2 align-middle sm:flex sm:flex-row ">
       <Link
         className={clsx(
-          "hover:border-b-2",
-          pathName === "/"
-            ? "font-extrabold text-nav-text-color hover:border-b-0"
-            : "",
+          'hover:border-b-2',
+          pathName === '/'
+            ? 'font-extrabold text-nav-text-color hover:border-b-0'
+            : ''
         )}
-        href={"/"}
+        href={'/'}
       >
         Home
       </Link>
       <Link
         className={clsx(
-          "hover:border-b-2",
-          pathName === "/projects" &&
-            "font-extrabold text-nav-text-color hover:border-b-0",
+          'hover:border-b-2',
+          pathName === '/projects' &&
+            'font-extrabold text-nav-text-color hover:border-b-0'
         )}
-        href={"/projects"}
+        href={'/projects'}
       >
         Work
       </Link>
       <Link
         className={clsx(
-          "hover:border-b-2",
-          pathName === "/about" &&
-            "font-extrabold text-nav-text-color hover:border-b-0",
+          'hover:border-b-2',
+          pathName === '/about' &&
+            'font-extrabold text-nav-text-color hover:border-b-0'
         )}
-        href={"/about"}
+        href={'/about'}
       >
         About
       </Link>
       <Link
         className={clsx(
-          "hover:border-b-2",
-          pathName === "/contact" &&
-            "font-extrabold text-nav-text-color hover:border-b-0",
+          'hover:border-b-2',
+          pathName === '/contact' &&
+            'font-extrabold text-nav-text-color hover:border-b-0'
         )}
-        href={"/contact"}
+        href={'/contact'}
       >
         Contact
       </Link>
 
       <Link
         className={clsx(
-          "hover:border-b-2",
-          pathName === "/techStack" &&
-            "font-extrabold text-nav-text-color hover:border-b-0",
+          'hover:border-b-2',
+          pathName === '/techStack' &&
+            'font-extrabold text-nav-text-color hover:border-b-0'
         )}
-        href={"/techStack"}
+        href={'/techStack'}
       >
         Tech Stack
       </Link>
       <Link
         className="hover:border-b-2"
         target="_blank"
-        href={"https://github.com/jakolandio3/portfolio_v1_2023"}
+        href={'https://github.com/jakolandio3/portfolio_v1_2023'}
       >
         <div className="flex flex-row gap-1">
-          This Repo{" "}
+          This Repo{' '}
           <span className="text-xs">
             <FaExternalLinkAlt />
           </span>

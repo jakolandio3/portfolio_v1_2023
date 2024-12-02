@@ -1,5 +1,5 @@
-import { HiAcademicCap, HiOutlineStar, HiStar } from "react-icons/hi2";
-import Button from "./Button";
+import { HiAcademicCap, HiOutlineStar, HiStar } from 'react-icons/hi2';
+import Button from './Button';
 
 function NewProjectCard() {
   return (
@@ -15,7 +15,7 @@ function NewProjectCard() {
           Your Project Goes Here
         </h1>
         <p className=" pb-[70px] pt-2 text-white opacity-40">
-          Let's turn your idea into a virtual reality
+          Let&apos;s turn your idea into a virtual reality
         </p>
         <div className="mb-[100px] w-[50%]">
           <Button href="/contact">Get in touch &rarr;</Button>
