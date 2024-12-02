@@ -7,7 +7,7 @@ function SectionCard({
   image = "",
   link = "/",
   children,
-}) {
+}: SectionCardProps) {
   return (
     <>
       <Link href={link}>
@@ -22,7 +22,7 @@ function SectionCard({
 
           <div className="relative flex h-[200px] justify-center overflow-hidden object-contain lg:h-[300px]">
             {children}
-            {image !== "" && (
+            {image && (
               <Image
                 className="-scale-x-100 rounded-t-2xl "
                 fill={true}
@@ -37,6 +37,14 @@ function SectionCard({
       </Link>
     </>
   );
+}
+
+interface SectionCardProps {
+  title: string;
+  blurb: string;
+  image?: string;
+  link: string;
+  children: React.ReactNode;
 }
 
 export default SectionCard;

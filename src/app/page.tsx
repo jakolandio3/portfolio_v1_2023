@@ -2,7 +2,7 @@ import AppCard from "./components/AppCard";
 import SectionCard from "./components/SectionCard";
 import Button from "./components/Button";
 import Link from "next/link";
-import List from "./library/AppList";
+import { AppList } from "./library/AppList";
 import Image from "next/image";
 
 import {
@@ -19,7 +19,7 @@ import {
 import { FaCloudDownloadAlt, FaExternalLinkAlt } from "react-icons/fa";
 
 function app() {
-  const topApps = List.slice(0, 3);
+  const topApps = AppList.slice(0, 3);
 
   return (
     <main className="w-full flex-col justify-center px-5 md:flex">
@@ -66,7 +66,7 @@ function app() {
           </p>
 
           <div className="flex gap-5 pt-10">
-            <Button to="/contact" className="text-center">
+            <Button href="/contact" className="text-center">
               {" "}
               Contact Me{" "}
             </Button>
@@ -88,14 +88,13 @@ function app() {
           <h2 className="flex w-full flex-col justify-between gap-5 pb-5 text-6xl font-bold text-primary-text-color md:flex-row">
             <p>Selected Work</p>
             <span className="text-center text-lg">
-              <Button scroll={true} to="projects">
+              <Button scroll={true} href="projects">
                 View All..
               </Button>
             </span>
           </h2>
           {topApps.map((app) => (
             <AppCard
-              gallery={app.gallery}
               key={app.name}
               appName={app.name}
               appBlurb={app.description}
@@ -106,12 +105,12 @@ function app() {
               onClickCard={
                 <div className="flex h-full flex-col justify-between gap-3">
                   <div className="grid grid-flow-row grid-cols-3 gap-1 text-xs">
-                    {app.category.map((genre) => (
+                    {app.categories.map((category, idx) => (
                       <p
-                        key={genre}
+                        key={`${app.name}-${category}-${idx}`}
                         className="w-[full] pb-3 italic text-primary-text-color text-opacity-80"
                       >
-                        {genre}
+                        {category}
                       </p>
                     ))}
                   </div>
@@ -201,7 +200,7 @@ function app() {
           </div>
 
           <div className=" min-w-fit self-center text-center md:flex md:min-w-[200px]">
-            <Button to="/contact">Get in touch &rarr;</Button>
+            <Button href="/contact">Get in touch &rarr;</Button>
           </div>
         </div>
       </section>

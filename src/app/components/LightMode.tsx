@@ -9,33 +9,6 @@ function LightMode() {
     setIsLightmode((isLightMode) => !isLightMode);
   }, []);
   useEffect(() => {
-    // const main = document.querySelector("main");
-    // if (isLightMode === true) {
-    //   document
-    //     .querySelectorAll("#name-header")
-    //     .forEach((header) => header.classList.toggle("text-black", true));
-    //   document
-    //     .querySelectorAll("#navbar-extras")
-    //     .forEach((header) => header.classList.toggle("bg-blue-500", true));
-    //   document
-    //     .querySelectorAll("#navbar-extras")
-    //     .forEach((header) => header.classList.toggle("bg-black", false));
-
-    //   main.classList.toggle("bg-blue-500", true);
-    // } else {
-    //   document
-    //     .querySelectorAll("#name-header")
-    //     .forEach((header) => header.classList.toggle("text-black", false));
-
-    //   document
-    //     .querySelectorAll("#navbar-extras")
-    //     .forEach((header) => header.classList.toggle("bg-black", true));
-    //   document
-    //     .querySelectorAll("#navbar-extras")
-    //     .forEach((header) => header.classList.toggle("bg-blue-500", false));
-
-    //   main.classList.toggle("bg-blue-500", false);
-    // }
     if (!isLightMode) {
       document.documentElement.classList.add("dark-mode");
       document.documentElement.classList.remove("light-mode");
@@ -45,7 +18,7 @@ function LightMode() {
     }
   }, [isLightMode]);
   return (
-    <button onClick={handleClick} className="text-sun-color mr-2">
+    <button onClick={handleClick} className="mr-2 text-sun-color">
       {isLightMode ? <FaMoon /> : <MdWbSunny />}
     </button>
   );

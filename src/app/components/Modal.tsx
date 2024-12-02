@@ -7,7 +7,7 @@ function Modal({
   content,
   modalName,
   modalButton = "ModalButton-Placeholder",
-}) {
+}: ModalProps) {
   const searchParams = useSearchParams();
   let showModal = searchParams.has(`modal_${modalName}`);
   return (
@@ -22,7 +22,7 @@ function Modal({
 
 export default Modal;
 
-function BoxModal({ content }) {
+function BoxModal({ content }: Pick<ModalProps, "content">) {
   return (
     <div
       id="modal1"
@@ -31,9 +31,15 @@ function BoxModal({ content }) {
       <div className="no-scrollbar relative left-[10%] z-[50] h-[70%] w-[80%] self-center overflow-y-scroll rounded-xl border bg-transparent p-3">
         {content}
         <div className="fixed right-[-5%] top-[-50px] m-20">
-          <Button to="?">❌</Button>
+          <Button href="#">❌</Button>
         </div>
       </div>
     </div>
   );
+}
+
+interface ModalProps {
+  content: React.ReactNode;
+  modalName: string;
+  modalButton?: React.ReactNode;
 }

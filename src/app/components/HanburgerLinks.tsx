@@ -5,7 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
-function HamburgerLinks({ onChangeState }) {
+function HamburgerLinks({
+  onChangeState,
+}: {
+  onChangeState: (state: boolean) => void;
+}) {
   const pathName = usePathname();
   return (
     <div className="flex flex-col items-start justify-between justify-items-center gap-4 px-2 text-left text-2xl sm:flex sm:flex-row sm:align-middle sm:text-lg md:grid-cols-2 ">

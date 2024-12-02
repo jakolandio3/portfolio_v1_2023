@@ -9,7 +9,7 @@ function AppCard({
   bannerImg,
   techStack,
   whiteBG,
-}) {
+}: AppCardProps) {
   return (
     <div
       style={{
@@ -95,6 +95,16 @@ function AppCard({
       </div>
     </div>
   );
+}
+
+interface AppCardProps {
+  onClickCard?: React.ReactNode;
+  appName: string;
+  appBlurb: string;
+  appPhoto?: string;
+  bannerImg: string;
+  techStack: string[];
+  whiteBG?: boolean;
 }
 
 export default AppCard;

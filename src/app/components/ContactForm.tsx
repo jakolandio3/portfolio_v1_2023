@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 
 function ContactForm() {
@@ -6,17 +7,17 @@ function ContactForm() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const [messageStatus, setMessageStatus] = useState("");
+  const [success, setSuccess] = useState<boolean>(false);
   function resetState() {
     setEmail("");
     setSubject("");
     setMessage("");
     setFullName("");
   }
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const res = await fetch("/api/sendgrid", {
+    const res: Response = await fetch("/api/sendgrid", {
       body: JSON.stringify({
         email: email,
         fullname: fullName,
@@ -26,7 +27,7 @@ function ContactForm() {
       headers: { "Content-Type": "application/json" },
       method: "POST",
     });
-    setMessageStatus(res.ok);
+    setSuccess(res.ok);
     resetState();
   };
   return (
@@ -79,7 +80,7 @@ function ContactForm() {
           required
         ></textarea>
         <div className="flex w-full flex-row justify-end ">
-          {messageStatus === true && (
+          {success === true && (
             <h1 className="mr-5 w-full self-center italic text-green-400">
               Message successfully sent 😀
             </h1>
