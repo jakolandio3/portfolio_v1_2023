@@ -1,4 +1,4 @@
-import NavbarLinks from "./NavbarLinks";
+import NavbarLinks from './NavbarLinks';
 
 function MobileHamburgerMenu() {
   return (
@@ -37,7 +37,7 @@ function MobileHamburgerMenu() {
               </label>
             </li>
             <li>
-              {" "}
+              {' '}
               <NavbarLinks />
             </li>
           </ul>

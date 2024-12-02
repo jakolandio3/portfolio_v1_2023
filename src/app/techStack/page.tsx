@@ -1,51 +1,51 @@
-import PageLayout from "../components/PageLayout";
+import PageLayout from '../components/PageLayout';
 
-import TechCard from "../components/TechCard";
+import TechCard from '../components/TechCard';
 
 function page() {
   return (
     <PageLayout
-      title={"Tech Stack"}
-      blurb={"The Development tools in my arsenal"}
+      title={'Tech Stack'}
+      blurb={'The Development tools in my arsenal'}
     >
       <main className="mx-auto flex w-full flex-col items-center gap-32 px-12 ">
         <section className="flex w-full flex-col items-center gap-8">
           <h2 className="w-full text-4xl">Programming Languages</h2>
           <div className="flex w-full grow flex-wrap justify-start gap-5">
             <TechCard
-              className={""}
+              className={''}
               title="TypeScript"
               blurb="Dev"
               image="/ts-logo-256-1.svg"
             />
             <TechCard
-              className={""}
+              className={''}
               title="JavaScript"
               blurb="Dev"
               image="icons8-javascript.svg"
             />
 
             <TechCard
-              className={""}
+              className={''}
               title="SassCSS"
               blurb="style"
               image="/icons8-sass.svg"
             />
             <TechCard
-              className={""}
+              className={''}
               title="CSS-3"
               blurb="Style"
               image="/icons8-css3.svg"
             />
             <TechCard
-              className={""}
+              className={''}
               title="HTML-5"
               blurb="HTML"
               image="/icons8-html5.svg"
             />
 
             <TechCard
-              className={""}
+              className={''}
               title="J-Query"
               blurb="Dev"
               image="/icons8-jquery.svg"

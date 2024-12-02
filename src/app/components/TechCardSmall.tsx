@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-import Button from "./Button";
+import Button from './Button';
 
 function TechCardSmall({
-  blurb = "placeholder, add a blurb",
-  image = "/rishabh-malhotra-83ypHTv6J2M-unsplash.png",
+  blurb = 'placeholder, add a blurb',
+  image = '/rishabh-malhotra-83ypHTv6J2M-unsplash.png'
 }) {
   return (
     <div
@@ -16,7 +16,7 @@ function TechCardSmall({
           className="-scale-x-100 rounded-2xl "
           fill={true}
           sizes="full"
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: 'cover' }}
           src={image}
           alt="Phone"
         />

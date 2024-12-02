@@ -1,4 +1,4 @@
-import Button from "../components/Button";
+import Button from '../components/Button';
 
 function page() {
   return (
@@ -18,9 +18,9 @@ function page() {
           <div className="pb-3">
             <h2 className="text-lg font-medium opacity-40">Who I am</h2>
             <p className="text-md font-thin opacity-90">
-              My name is Jakob Douglas, I'm 28 years old from Adelaide, South
-              Australia and I enjoy learning how things work and then creating
-              amazing things with this knowledge.
+              My name is Jakob Douglas, I&apos;m 28 years old from Adelaide,
+              South Australia and I enjoy learning how things work and then
+              creating amazing things with this knowledge.
             </p>
           </div>
           <div className="pb-3">

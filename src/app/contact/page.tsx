@@ -1,7 +1,7 @@
-import ContactForm from "../components/ContactForm";
-import LinksCard from "../components/LinksCard";
+import ContactForm from '../components/ContactForm';
+import LinksCard from '../components/LinksCard';
 
-import PageLayout from "../components/PageLayout";
+import PageLayout from '../components/PageLayout';
 
 function page() {
   return (

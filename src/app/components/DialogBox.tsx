@@ -1,8 +1,8 @@
-"use client";
-import * as Dialog from "@radix-ui/react-dialog";
+'use client';
+import * as Dialog from '@radix-ui/react-dialog';
 
-import { useState } from "react";
-import HamburgerLinks from "./HanburgerLinks";
+import { useState } from 'react';
+import HamburgerLinks from './HanburgerLinks';
 
 function DialogDemo() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ function DialogDemo() {
             viewBox="0 0 24 24"
             className="inline-block h-10 w-10 stroke-current"
           >
-            {" "}
+            {' '}
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -39,7 +39,7 @@ function DialogDemo() {
                 <button className="text-2xl">❌</button>
               </Dialog.Close>
               <li>
-                {" "}
+                {' '}
                 <HamburgerLinks onChangeState={setIsOpen} />
               </li>
             </ul>

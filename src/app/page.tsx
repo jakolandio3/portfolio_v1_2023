@@ -1,9 +1,9 @@
-import AppCard from "./components/AppCard";
-import SectionCard from "./components/SectionCard";
-import Button from "./components/Button";
-import Link from "next/link";
-import { AppList } from "./library/AppList";
-import Image from "next/image";
+import AppCard from './components/AppCard';
+import SectionCard from './components/SectionCard';
+import Button from './components/Button';
+import Link from 'next/link';
+import { AppList } from './library/AppList';
+import Image from 'next/image';
 
 import {
   SiCss3,
@@ -14,9 +14,9 @@ import {
   SiNodedotjs,
   SiReact,
   SiVisualstudiocode,
-  SiVite,
-} from "react-icons/si";
-import { FaCloudDownloadAlt, FaExternalLinkAlt } from "react-icons/fa";
+  SiVite
+} from 'react-icons/si';
+import { FaCloudDownloadAlt, FaExternalLinkAlt } from 'react-icons/fa';
 
 function app() {
   const topApps = AppList.slice(0, 3);
@@ -36,7 +36,7 @@ function app() {
           </h1>
           <h2 className="pb-3 text-7xl font-bold sm:pb-8 md:pb-0">
             <span id="name-header" className="text-secondary-text-color">
-              I'm{" "}
+              I&apos;m{' '}
             </span>
             Jakob <span className="hidden md:inline-block">Douglas</span>
           </h2>
@@ -48,31 +48,31 @@ function app() {
             <span className="relative flex h-3 w-3">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-200 opacity-75"></span>
               <span className="relative inline-flex h-3 w-3 rounded-full bg-teal-400"></span>
-            </span>{" "}
+            </span>{' '}
             Open to work in 2024
           </p>
 
           <p className="mr-auto hidden max-w-[80%] py-5 text-left italic sm:block">
-            I'm a Full-Stack Software Engineer specializing in creating
+            I&apos;m a Full-Stack Software Engineer specializing in creating
             web-based apps, <br /> Working with frameworks such as NextJs and
-            React{" "}
+            React{' '}
             <Link
               href="/about"
               className="text-center font-bold italic text-yellow-400"
             >
-              {" "}
-              ..Read more{" "}
+              {' '}
+              ..Read more{' '}
             </Link>
           </p>
 
           <div className="flex gap-5 pt-10">
             <Button href="/contact" className="text-center">
-              {" "}
-              Contact Me{" "}
+              {' '}
+              Contact Me{' '}
             </Button>
             <Link
               className="flex rounded-lg border border-button-text bg-sun-color p-3 font-bold text-button-text shadow-inner hover:text-black hover:shadow-gray-600"
-              download={"resume"}
+              download={'resume'}
               href="/resume/JakobResumepdf_2024.pdf"
             >
               View my Resume
@@ -134,7 +134,7 @@ function app() {
                       href={`/projects/${app.name}`}
                       className="text-xl text-white opacity-80 hover:opacity-100 "
                     >
-                      {"Gallery.."}
+                      {'Gallery..'}
                     </Link>
                   </div>
                 </div>
@@ -159,7 +159,7 @@ function app() {
             {
               <Image
                 className="object-contain invert"
-                src={"/userIcon.svg"}
+                src={'/userIcon.svg'}
                 alt="https://www.freepik.com/icon/profile_8459373"
                 fill={true}
               />

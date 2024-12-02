@@ -1,31 +1,31 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
 function ContactForm() {
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
   const [success, setSuccess] = useState<boolean>(false);
   function resetState() {
-    setEmail("");
-    setSubject("");
-    setMessage("");
-    setFullName("");
+    setEmail('');
+    setSubject('');
+    setMessage('');
+    setFullName('');
   }
   const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const res: Response = await fetch("/api/sendgrid", {
+    const res: Response = await fetch('/api/sendgrid', {
       body: JSON.stringify({
         email: email,
         fullname: fullName,
         subject: subject,
-        message: message,
+        message: message
       }),
-      headers: { "Content-Type": "application/json" },
-      method: "POST",
+      headers: { 'Content-Type': 'application/json' },
+      method: 'POST'
     });
     setSuccess(res.ok);
     resetState();
@@ -37,8 +37,8 @@ function ContactForm() {
     >
       <form onSubmit={handleSubmit} className="flex flex-col md:w-full">
         <h1 className=" my-6 w-full border-b border-dashed border-secondary-color text-center text-3xl">
-          {" "}
-          Send a Message 📧{" "}
+          {' '}
+          Send a Message 📧{' '}
         </h1>
         <label htmlFor="fullname">
           Full name <span className="text-red-500">*</span>
