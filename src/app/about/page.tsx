@@ -1,5 +1,4 @@
 import Button from "../components/Button";
-import Image from "next/image";
 
 function page() {
   return (
@@ -61,7 +60,7 @@ function page() {
         </main>
         <aside className="flex flex-col gap-20 p-5">
           <div className="flex items-center justify-center md:h-full">
-            <Button to="/contact">Get in touch &rarr;</Button>
+            <Button href="/contact">Get in touch &rarr;</Button>
           </div>
         </aside>
       </section>

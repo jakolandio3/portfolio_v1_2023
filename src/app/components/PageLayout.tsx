@@ -1,4 +1,4 @@
-function PageLayout({ children, title, blurb, extLinks }) {
+function PageLayout({ children, title, blurb, extLinks }: PageLayoutProps) {
   return (
     <div className="md:w-[80%]">
       <section
@@ -18,6 +18,13 @@ function PageLayout({ children, title, blurb, extLinks }) {
       </section>
     </div>
   );
+}
+
+interface PageLayoutProps {
+  children: React.ReactNode;
+  title: string;
+  blurb: string;
+  extLinks?: React.ReactNode;
 }
 
 export default PageLayout;

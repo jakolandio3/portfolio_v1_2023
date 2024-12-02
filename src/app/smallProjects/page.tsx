@@ -24,12 +24,12 @@ export default page;
 function Notes({
   title = "add a title",
   image,
-  amount,
+  amount = 0,
   blurb = "add a brief description",
   imageTitle,
   date,
   length,
-}) {
+}: NotesProps) {
   return (
     <div className="flex w-full justify-center">
       <div
@@ -59,7 +59,7 @@ function Notes({
         <aside className="flex flex-col  gap-3">
           <div>
             <h2 className="mb-5">
-              {amount ? amount : "0"} {amount > 0 ? "Notes" : "Note"}
+              {amount} {amount > 0 ? "Notes" : "Note"}
             </h2>
             <p className="text-xs">{blurb}</p>
           </div>
@@ -70,4 +70,14 @@ function Notes({
       </div>
     </div>
   );
+}
+
+interface NotesProps {
+  title: string;
+  image: string;
+  amount?: number;
+  blurb?: string;
+  imageTitle?: string;
+  date?: string;
+  length?: number;
 }

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import LogoImg from "./LogoImg";
 
-function Footer({ children }) {
+function Footer() {
   return (
     <div className="flex w-full justify-center px-5">
       <footer className=" mt-20 flex w-full justify-around border-t-2 border-dashed border-t-secondary-color border-opacity-20 pt-8 text-primary-text-color">
@@ -77,8 +77,6 @@ function Footer({ children }) {
           </ul>
         </div>
         <div className="absolute -z-10 h-[100px] w-[80%] rounded-t-full bg-gradient-to-r from-[rgba(0,0,255,0.5)] via-red-500 to-yellow-500 opacity-40 blur-3xl"></div>
-
-        {children}
       </footer>
     </div>
   );

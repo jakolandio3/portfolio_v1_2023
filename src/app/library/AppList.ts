@@ -1,9 +1,11 @@
-const List = [
+import { GalleryItem } from "../components/Gallery";
+
+export const AppList: AppView[] = [
   {
     name: "The-Wild-Oasis",
     description:
       "Application for booking cabins designed for staff usage with authentication and back end hosted with Supabase, fullstack- real world application that is fast, fully interactive and client friendly",
-    category: [
+    categories: [
       "Full-Stack",
       "React",
       "authentication",
@@ -11,7 +13,7 @@ const List = [
       "styled-components",
     ],
     photo: "/wild-oasis-side.png",
-    gallery: [
+    images: [
       {
         imageUrl: "/wild-oasis-bg.png",
         type: "statistics",
@@ -68,7 +70,7 @@ const List = [
     name: "World-Wise",
     description:
       "SPA made with Vite + React that tracks where you have traveled featuring a responsive design and open source map from Leaflet",
-    category: [
+    categories: [
       "full-stack",
       "Travel",
       "database",
@@ -77,7 +79,7 @@ const List = [
       "react",
     ],
     photo: "",
-    gallery: [
+    images: [
       {
         imageUrl: "/world-wise/worldWise-bg.png",
         type: "travel",
@@ -129,9 +131,9 @@ const List = [
     name: "Flixx-App",
     description:
       "Movie and Tv Streaming service with back-end Api fetching, star rating and user-storage for ratings. built with Vanilla JS",
-    category: ["web-app", "front-end", "entertainment", "API"],
+    categories: ["web-app", "front-end", "entertainment", "API"],
     photo: "/no-image.jpg",
-    gallery: [
+    images: [
       {
         imageUrl: "/flixx/flixx-banner.png",
         type: "feature",
@@ -168,7 +170,7 @@ const List = [
     name: "Random-Ideas",
     description:
       "Single-page REST Application build from the ground up,back end hosted with mongoDB and Render. Allows users to sign in with a pseudo Authentication using your Local storage. Built for spreading ideas with friends and brainstorming ideas in Reactive live view but built with vanilla JS",
-    category: [
+    categories: [
       "full-stack",
       "Social",
       "SQL",
@@ -179,7 +181,7 @@ const List = [
       "axios",
     ],
     photo: "",
-    gallery: [
+    images: [
       {
         imageUrl: "/random-ideas/random-bg.png",
         type: "Home",
@@ -211,7 +213,7 @@ const List = [
     name: "Fast-react-pizza",
     description:
       "Pizza ordering and order tracking application for a shop, made with react, vite and styled with tailwind. this app makes use of React router, Redux, context providers and React reducer",
-    category: [
+    categories: [
       "full-stack",
       "shopping",
       "storefront",
@@ -220,7 +222,7 @@ const List = [
       "tailwind",
     ],
     photo: "/reactPizza.png",
-    gallery: [
+    images: [
       {
         imageUrl: "/react-pizza/order-pizzas-online.png",
         type: "UI",
@@ -267,9 +269,9 @@ const List = [
     name: "React-Quiz",
     description:
       "SPA that tests your knowledge for basic and advanced react skills build using react hooks such as context, state, effect and reducer",
-    category: ["Learning", "react", "server-hosting", "API"],
+    categories: ["Learning", "react", "server-hosting", "API"],
     photo: "/quiz-side.png",
-    gallery: [
+    images: [
       {
         imageUrl: "/react-quiz/test-your-knowledge.png",
         type: "",
@@ -306,9 +308,9 @@ const List = [
     name: "Popcorn-Movies",
     description:
       "A single page application for use in searching and reviewing movies, using API fetching and built with react",
-    category: ["Learning", "react", "API", "entertainment"],
+    categories: ["Learning", "react", "API", "entertainment"],
     photo: "/popcorn.png",
-    gallery: [
+    images: [
       {
         imageUrl: "/popcorn-movies/search-database.png",
         type: "",
@@ -340,9 +342,9 @@ const List = [
     name: "Track-Calorie",
     description:
       "A small Vanilla application for tracking meals and workouts uses Webpack to deploy",
-    category: ["Learning", "JavaScript", "Health", "Fitness"],
+    categories: ["Learning", "JavaScript", "Health", "Fitness"],
     photo: "",
-    gallery: [
+    images: [
       {
         imageUrl: "/track-calorie/add-meals-and-workouts.png",
         type: "HomeScreen",
@@ -372,4 +374,15 @@ const List = [
   },
 ];
 
-export default List;
+export interface AppView {
+  name: string;
+  description: string;
+  categories: string[];
+  photo: string;
+  images: GalleryItem[];
+  techStack: string[];
+  website: string;
+  gitHub: string;
+  bannerImg: string;
+  light: boolean;
+}

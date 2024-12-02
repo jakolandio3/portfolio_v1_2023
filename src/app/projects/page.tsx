@@ -3,7 +3,7 @@ import AppCard from "../components/AppCard";
 import Button from "../components/Button";
 import NewProjectCard from "../components/NewProjectCard";
 import Link from "next/link";
-import List from "../library/AppList";
+import { AppList } from "../library/AppList";
 import { SiGithub } from "react-icons/si";
 
 function page() {
@@ -27,13 +27,12 @@ function page() {
             <h2 className=" font-bold text-white md:text-2xl lg:text-4xl">
               Get in contact to start a new project today
             </h2>
-            <Button className="w-fit text-xs" to="/contact">
+            <Button className="w-fit text-xs" href="/contact">
               Get started &rarr;
             </Button>
           </div>
-          {List.map((app) => (
+          {AppList.map((app) => (
             <AppCard
-              gallery={app.gallery}
               key={app.name}
               appName={app.name}
               appBlurb={app.description}
@@ -44,12 +43,12 @@ function page() {
               onClickCard={
                 <div className="flex h-full flex-col justify-between gap-3">
                   <div className="grid grid-flow-row grid-cols-3 gap-1 text-xs">
-                    {app.category.map((genre) => (
+                    {app.categories.map((category, idx) => (
                       <p
-                        key={genre}
+                        key={`${app.name}-${category}-${idx}`}
                         className="w-[full] pb-3 italic text-white text-opacity-80"
                       >
-                        {genre}
+                        {category}
                       </p>
                     ))}
                   </div>

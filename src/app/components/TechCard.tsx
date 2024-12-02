@@ -6,7 +6,7 @@ function TechCard({
   blurb = "placeholder, add a blurb",
   image = "/rishabh-malhotra-83ypHTv6J2M-unsplash.png",
   className,
-}) {
+}: TechCardProps) {
   return (
     <div
       className={clsx(
@@ -28,6 +28,13 @@ function TechCard({
       </div>
     </div>
   );
+}
+
+interface TechCardProps {
+  title: string;
+  blurb: string;
+  image: string;
+  className?: string;
 }
 
 export default TechCard;
